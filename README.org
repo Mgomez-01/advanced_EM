@@ -1,0 +1,2 @@
+* Advanced EM
+Repo for holding all HW and Project files. Will have more than just the papers of interest added in as the semester rolls along
