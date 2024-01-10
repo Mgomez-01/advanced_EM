@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{mathrsfs}
+\usepackage[calc]{datetime2}
+\usepackage{boondox-cal}
+\DTMsavenow{now}
+\DTMsavedate{DueDate}{2024-01-20}
+
+\newcount\daystilldue
+\newcount\hourstilldue
+\newcount\minutestilldue
+
+% Calculate the difference in days
+\DTMsaveddatediff{DueDate}{now}{\daystilldue}
+
+% Calculate the difference in hours and minutes
+\hourstilldue=\DTMfetchhour{DueDate}
+\advance\hourstilldue by -\DTMfetchhour{now}
+\minutestilldue=\DTMfetchminute{DueDate}
+\advance\minutestilldue by -\DTMfetchminute{now}
+
+% Adjust for negative values
+\ifnum\hourstilldue<0
+  \advance\hourstilldue by 24
+  \advance\daystilldue by -1
+\fi
+\ifnum\minutestilldue<0
+  \advance\minutestilldue by 60
+  \advance\hourstilldue by -1
+\fi
+
+\newcommand{\TimeUntilDue}{
+  \ifnum\daystilldue<4
+    \textcolor{red}{
+    \number\daystilldue\ days - 
+    \number\hourstilldue\ hours - 
+    \number\minutestilldue\ min until deadline!!
+  }
+\else
+    \number\daystilldue\ days - 
+    \number\hourstilldue\ hours - 
+    \number\minutestilldue\ min until deadline
+  \fi
+}
+
+
+\begin{document}
+
+\title{ECE 6310 - Advanced Electromagnetic Fields: Homework Set \#1}
+\author{Miguel Gomez}
+\date{\TimeUntilDue}
+\maketitle
+
+% Problem 1.3
+\begin{center}
+  $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$\\
+$\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+\end{center}
+\section*{Problem 1.3}
+The electric flux density inside a cube is given by:
+\begin{itemize}
+    \item[(a)] \( \vec{D} = \hat{a}_x (3 + x) \)
+    \item[(b)] \( \vec{D} = \hat{a}_y (4 + y^2) \)
+\end{itemize}
+Find the total electric charge enclosed inside the cubical volume when the cube is in the first octant with three edges coincident with the x, y, z axes and one corner at the origin. Each side of the cube is 1 m long.
+\newline
+Ok, this one we can do by using the following expressions from the text \cite{balanis_2012}:
+\begin{equation}\label{stokes}
+  \oiint_{s}\mathscr{D}ds = \iiint_{v} \mathcal{q}_{ev}dv =  \mathscr{Q}_{e}
+\end{equation}
+\begin{equation}\label{deldot}
+  \mathcal{q}_{ev} =  \Delta \cdot \mathscr{D}   
+\end{equation}
+
+We apply expression \ref{deldot} then plug into expression \ref{stokes} to get the total electric charge. 
+% Problem 1.4
+\section*{Problem 1.4}
+An infinite planar interface between media, as shown in the figure, is formed by having air (medium \#1) on the left of the interface and lossless polystyrene (medium \#2) to the right of the interface. An electric surface charge density \( \sigma_{es} = 0.2 \, \text{C/m}^2 \) exists along the entire interface. The static electric flux density inside the polystyrene is given by \( \vec{D}_2 = 6\hat{a}_x + 3\hat{a}_z \, \text{C/m}^2 \).
+Determine the corresponding vector:
+\begin{itemize}
+    \item[(a)] Electric field intensity inside the polystyrene.
+    \item[(b)] Electric polarization vector inside the polystyrene.
+    \item[(c)] Electric flux density inside the air medium.
+    \item[(d)] Electric field intensity inside the air medium.
+    \item[(e)] Electric polarization vector inside the air medium.
+\end{itemize}
+Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
+
+% Problem 1.13
+\section*{Problem 1.13}
+The instantaneous magnetic flux density in free space is given by:
+\[
+\vec{\mathcal{B}} = \hat{a}_x B_x \cos(2y) \sin(\omega t - \pi z) + \hat{a}_y B_y \cos(2x) \cos(\omega t - \pi z)
+\]
+where \( B_x \) and \( B_y \) are constants. Assuming there are no sources at the observation points \( x, y \), determine the electric displacement current density.
+
+% Problem 1.20
+\section*{Problem 1.20}
+The instantaneous electric field inside a conducting rectangular pipe (waveguide) of width \( a \) is given by:
+\[
+\vec{\mathcal{E}} = \hat{a}_y E_0 \sin\left(\frac{\pi x}{a}\right) \cos(\omega t - \beta_z z)
+\]
+where \( \beta_z \) is the waveguide's phase constant. Assuming there are no sources within the free-space-filled pipe determine the:
+\begin{itemize}
+\item[(a)] Corresponding instantaneous magnetic field components inside the conducting pipe.
+\item[(b)] Phase constant \( \beta_z \).
+\item[(c)] The height of the waveguide is \( b \).
+\end{itemize}
+
+    
+% Problem 2.18
+\section*{Problem 2.18}
+The time-varying electric field inside a lossless dielectric material of polystyrene, of infinite dimensions and with a relative permittivity (dielectric constant) of 2.56, is given by:
+\[
+\vec{\mathcal{E}} = \hat{a}_x 10^{-3} \sin(2\pi \times 10^7 t) \, \text{V/m}
+\]
+Determine the corresponding:
+\begin{itemize}
+    \item[(a)] Electric susceptibility of the dielectric material.
+    \item[(b)] Time-harmonic electric flux density vector.
+    \item[(c)] Time-harmonic electric polarization vector.
+    \item[(d)] Time-harmonic displacement current density vector.
+    \item[(e)] Time-harmonic polarization current density vector defined as the partial derivative of the corresponding electric polarization vector.
+\end{itemize}
+Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
+
+% Problem 2.25
+\section*{Problem 2.25}
+Aluminum has a static conductivity of about \( \sigma = 3.96 \times 10^7 \, \text{S/m} \) and an electron mobility of \( \mu_e = 2.2 \times 10^{-3} \, \text{m}^2/(\text{V-s}) \). Assuming that an electric field of \( \vec{E} = \hat{a}_x 2 \, \text{V/m} \) is applied perpendicularly to the square area of an aluminum wafer with cross-sectional area of about \( 10 \, \text{cm}^2 \), find the:
+\begin{itemize}
+    \item[(a)] Electron charge density \( q_{\text{ve}} \).
+    \item[(b)] Electron drift velocity \( v_e \).
+    \item[(c)] Electric current density \( J \).
+    \item[(d)] Electric current flowing through the square cross section of the wafer.
+    \item[(e)] Electron density \( N_e \).
+\end{itemize}
+Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
+
+
+% References (if any)
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
