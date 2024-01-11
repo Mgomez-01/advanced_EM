@@ -76,7 +76,16 @@ Ok, this one we can do by using the following expressions from the text \cite{ba
   \mathcal{q}_{ev} =  \Delta \cdot \mathscr{D}   
 \end{equation}
 
-We apply expression \ref{deldot} then plug into expression \ref{stokes} to get the total electric charge. 
+We apply expression \ref{deldot} then plug into expression \ref{stokes} to get the total electric charge.
+\begin{equation*}
+  \iiint_{V}\mathcal{q}_{ev} = \iiint_{V}\Delta \cdot (\hat a_x (3+x))dV = \iiint_{V} \partial_x (\hat a_x (3+x))dV= \iiint_{0}^{1}1dV= 1 
+\end{equation*}
+\begin{equation*}
+    \iiint_{V}\mathcal{q}_{ev} = \iiint_{V}\Delta \cdot (\hat a_y (4+y^2))dV =  \iiint_{V} \partial_y (\hat a_y (4+y^2))dV = \iiint_{0}^{1}2y\ dV
+\end{equation*}
+\begin{equation*}
+\iiint_{0}^{1}2y\ dV = \iint_{0}^{1}\int_{0}^{1}2ydy\ ds = \iint_{0}^{1}y^2|_{0}^{1} ds =  \iint_{0}^{1}(1-0)\ ds = 1
+\end{equation*}
 % Problem 1.4
 \section*{Problem 1.4}
 An infinite planar interface between media, as shown in the figure, is formed by having air (medium \#1) on the left of the interface and lossless polystyrene (medium \#2) to the right of the interface. An electric surface charge density \( \sigma_{es} = 0.2 \, \text{C/m}^2 \) exists along the entire interface. The static electric flux density inside the polystyrene is given by \( \vec{D}_2 = 6\hat{a}_x + 3\hat{a}_z \, \text{C/m}^2 \).
@@ -143,6 +152,6 @@ Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
 
 % References (if any)
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography{references/references}
 
 \end{document}
