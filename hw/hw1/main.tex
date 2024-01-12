@@ -1,5 +1,4 @@
 \documentclass[12pt]{article}
-\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -7,6 +6,9 @@
 \usepackage{mathrsfs}
 \usepackage[calc]{datetime2}
 \usepackage{boondox-cal}
+\usepackage{bm} % For bold math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
 \DTMsavenow{now}
 \DTMsavedate{DueDate}{2024-01-20}
 
@@ -60,6 +62,47 @@
   $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$\\
 $\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 \end{center}
+\section{Preliminaries}
+
+In this document, we use standard notation for electromagnetic theory. Key equations and concepts are summarized below:
+
+\subsection*{Vector Notation}
+\begin{itemize}
+  \item $\mathbf{E}$: Electric field intensity
+  \item $\mathbf{H}$: Magnetic field intensity
+  \item $\mathbf{D}$: Electric flux density
+  \item $\mathbf{B}$: Magnetic flux density
+  \item $\mathbf{J}$: Current density
+  \item $\rho_v$: Volume charge density
+\end{itemize}
+
+\subsection*{Differential Operators}
+\begin{itemize}
+  \item $\nabla \cdot\ \ $: Divergence of a vector field
+  \item $\nabla \times\ \ $: Curl of a vector field
+  \item $\nabla\ \ $: Gradient of a scalar field
+  \item $\partial_i\ \ $: Partial derivative with respect to the independent basis element $i$
+\end{itemize}
+
+\subsection*{Maxwell's Equations}
+In integral form, Maxwell's equations are given by:
+\begin{align}
+  \oint_{\partial V} \bm{\mathcal{E}} \cdot d\bm{\mathcal{l}} &= - \frac{d}{dt} \int_{V} \bm{\mathcal{B}} \cdot d\bm{\mathcal{S}} & \text{(Faraday's Law of Induction)} \\
+  \oint_{\partial V} \bm{\mathcal{H}} \cdot d\bm{\mathcal{l}} &= \int_{V} \bm{\mathcal{J}} \cdot d\bm{\mathcal{S}} + \frac{d}{dt} \int_{V} \bm{\mathcal{D}} \cdot d\bm{\mathcal{S}} & \text{(Ampère's Circuital Law)} \\
+  \oiint_{\partial V} \bm{\mathcal{D}} \cdot d\bm{\mathcal{S}} &= \int_{V} \rho_v dV & \text{(Gauss's Law for Electricity)} \\
+  \oiint_{\partial V} \bm{\mathcal{B}} \cdot d\bm{\mathcal{S}} &= 0 & \text{(Gauss's Law for Magnetism)}
+\end{align}
+
+\subsection*{Other Relevant Equations}
+\begin{itemize}
+  \item Continuity Equation: $\nabla \cdot \mathbf{J} + \partial_t \rho_v = 0$
+  \item Relationship between $\mathbf{E}$, $\mathbf{D}$: $\mathbf{D} = \epsilon \mathbf{E}$
+  \item Relationship between $\mathbf{H}$, $\mathbf{B}$: $\mathbf{B} = \mu \mathbf{H}$
+\end{itemize}
+
+\subsection*{Boundary Conditions}
+Discuss the boundary conditions for $\mathbf{E}$, $\mathbf{H}$, $\mathbf{D}$, and $\mathbf{B}$ at interfaces between different media.
+
 \section*{Problem 1.3}
 The electric flux density inside a cube is given by:
 \begin{itemize}
@@ -70,10 +113,10 @@ Find the total electric charge enclosed inside the cubical volume when the cube 
 \newline
 Ok, this one we can do by using the following expressions from the text \cite{balanis_2012}:
 \begin{equation}\label{stokes}
-  \oiint_{s}\mathscr{D}ds = \iiint_{v} \mathcal{q}_{ev}dv =  \mathscr{Q}_{e}
+  \oiint_{s}\bm{\mathcal{D}}ds = \iiint_{v} \mathcal{q}_{ev}dv =  \mathscr{Q}_{e}
 \end{equation}
 \begin{equation}\label{deldot}
-  \mathcal{q}_{ev} =  \Delta \cdot \mathscr{D}   
+  \mathcal{q}_{ev} =  \Delta \cdot \bm{\mathcal{D}}   
 \end{equation}
 
 We apply expression \ref{deldot} then plug into expression \ref{stokes} to get the total electric charge.
