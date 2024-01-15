@@ -22,11 +22,10 @@
     "wasysym"
     "mathrsfs"
     "datetime2"
-    "boondox-cal"
     "bm"
     "amsmath"
     "amssymb"
-    "cancel")
+    "boondox-cal")
    (TeX-add-symbols
     "daystilldue"
     "hourstilldue"
@@ -35,8 +34,6 @@
    (LaTeX-add-labels
     "stokes"
     "deldot")
-   (LaTeX-add-environments
-    '("gathered" LaTeX-env-args ["argument"] 0))
    (LaTeX-add-bibliographies
     "references/references"))
  :latex)

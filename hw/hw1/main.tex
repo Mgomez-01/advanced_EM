@@ -9,6 +9,8 @@
 \usepackage{bm} % For bold math symbols
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{cancel}
+
 \DTMsavenow{now}
 \DTMsavedate{DueDate}{2024-01-20}
 
@@ -134,31 +136,74 @@ We apply expression \ref{deldot} then plug into expression \ref{stokes} to get t
 An infinite planar interface between media, as shown in the figure, is formed by having air (medium \#1) on the left of the interface and lossless polystyrene (medium \#2) to the right of the interface. An electric surface charge density \( \sigma_{es} = 0.2 \, \text{C/m}^2 \) exists along the entire interface. The static electric flux density inside the polystyrene is given by \( \vec{D}_2 = 6\hat{a}_x + 3\hat{a}_z \, \text{C/m}^2 \).
 Determine the corresponding vector:
 \begin{itemize}
-    \item[(a)] Electric field intensity inside the polystyrene.
-    \item[(b)] Electric polarization vector inside the polystyrene.
-    \item[(c)] Electric flux density inside the air medium.
-    \item[(d)] Electric field intensity inside the air medium.
-    \item[(e)] Electric polarization vector inside the air medium.
+\item[(a)] Electric field intensity inside the polystyrene. \\
+  we can find this using the following expression for the Electric field intensity vector:
+  \begin{align*}
+    \epsilon_{poly} &= 2.56\epsilon_0 \\
+    \mathbf{D} &= \epsilon\mathbf{E}\\
+    \mathbf{E} &= \epsilon^{-1}\mathbf{D} = 0.390625\epsilon_0^{-1}\cdot\mathbf{D} = \epsilon_0^{-1} (2.34\cdot a_x\ +\ 1.17\cdot a_z)
+  \end{align*}
+\item[(b)] Electric polarization vector inside the polystyrene.\\ 
+  we can find this using the following expression for the polarization vector:
+  \begin{align*}
+    \mathbf{P}_e &= \epsilon_0\chi_e\mathbf{E}\\
+    \chi_e = \epsilon_r- 1 &= 2.56 - 1 = 1.56 \\
+    \mathbf{P}_e = 1.56\textcolor{red}{\cancelto{\textcolor{black}{1}}{\textcolor{black}{\epsilon_0\epsilon_0^{-1}}}} (2.34\cdot a_x\ &+\ 1.17\cdot a_z) = 3.6504\cdot a_x\ +\ 1.8252\cdot a_z 
+  \end{align*}
+\item[(c)] Electric flux density inside the air medium.\\ 
+  By the continuity of tangential components at the boundary: \\
+  $\mathbf{\hat n}\times(\mathbf{E}_2 - \mathbf{E}_1) = 0$\\
+  we apply the following.
+  \begin{align*}
+    \mathbf{E}_{air} &= \mathbf{E}_{Poly}\\
+    \mathbf{D}_{air} &= \epsilon_{air}\mathbf{E}_{air}\\
+    \therefore \mathbf{D}_{air}\epsilon_{air}^{-1} &=  \mathbf{D}_{Poly}\epsilon_{Poly }^{-1}\\
+    \mathbf{D}_{air} &= \frac{\epsilon_{air}}{\epsilon_{Poly}}\mathbf{D}_{Poly} = \frac{\textcolor{red}{\cancel{\textcolor{black}{\epsilon_0}}}\cdot 1}{\textcolor{red}{\cancel{\textcolor{black}{\epsilon_0}}}\cdot 2.56}\cdot \mathbf{D}_{Poly}\\
+    &= \frac{6}{2.56}a_x  = 2.34\cdot a_x   
+  \end{align*}
+  The normal components at the boundary are not continuous and therefore we must do more.\\
+  The normal is $\hat a_z$\\
+  $\mathbf{\hat n}\cdot (\mathbf{D}_2 - \mathbf{D}_1) = q_{es}$\\
+  \begin{align*}
+    \hat a_z\cdot (\mathbf{D}_2 - \mathbf{D}_1) &= 0.2 \\
+     \mathbf{D}_{1z} = \mathbf{D}_{2z} - 0.2 &= 3-.2 = 2.8\\
+  \end{align*}
+\item[(d)] Electric field intensity inside the air medium.\\ 
+  Again using the expression $\mathbf{D} = \epsilon \mathbf{E}$
+  \begin{align*}
+    \mathbf{D}_{air} &= \epsilon_{air} \mathbf{E}_{air} \\
+    \mathbf{E}_{air} &= \epsilon_{air}^{-1}\mathbf{D}_{air}\\
+    &= \epsilon_0^{-1}(2.34\cdot a_x + 2.8\cdot a_z)
+  \end{align*}
+\item[(e)] Electric polarization vector inside the air medium.\\ 
+  Again using $\mathbf{P}_e = \epsilon_0\chi_e\mathbf{E}$\\
+  \begin{align*}
+    \mathbf{P}_{e_{air}} &= \epsilon_0\chi_{e_{air}}\mathbf{E}_{air}\\
+                         &= \chi_{e_{air}}\textcolor{red}{\cancelto{\textcolor{black}{1}}{\textcolor{black}{\epsilon_0\epsilon_0^{-1}}}}(2.34\cdot a_x + 2.8\cdot a_z)\\
+    \chi_{e_{air}} &= \epsilon_{r_{air}} - 1 = 1-1=0\\
+    \therefore \mathbf{P}_{e_{air}} = \mathbf{0}
+  \end{align*}
 \end{itemize}
-Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
+Leave your answers in terms of \( \epsilon_0, \mu_0 \).
 
 % Problem 1.13
 \section*{Problem 1.13}
 The instantaneous magnetic flux density in free space is given by:
 \[
-\vec{\mathcal{B}} = \hat{a}_x B_x \cos(2y) \sin(\omega t - \pi z) + \hat{a}_y B_y \cos(2x) \cos(\omega t - \pi z)
+{\bm{\mathcal{B}}} = \hat{a}_x B_x \cos(2y) \sin(\omega t - \pi z) + \hat{a}_y B_y \cos(2x) \cos(\omega t - \pi z)
 \]
-where \( B_x \) and \( B_y \) are constants. Assuming there are no sources at the observation points \( x, y \), determine the electric displacement current density.
+where \( B_x \) and \( B_y \) are constants. Assuming there are no sources at the observation points \( x, y \), determine the electric displacement current density.\\
+  We can obtain the electric displacement current $\bm{J}_d$ by using the expression  
 
 % Problem 1.20
 \section*{Problem 1.20}
 The instantaneous electric field inside a conducting rectangular pipe (waveguide) of width \( a \) is given by:
 \[
-\vec{\mathcal{E}} = \hat{a}_y E_0 \sin\left(\frac{\pi x}{a}\right) \cos(\omega t - \beta_z z)
+\bm{\mathcal{E}} = \hat{a}_y E_0 \sin\left(\frac{\pi x}{a}\right) \cos(\omega t - \beta_z z)
 \]
 where \( \beta_z \) is the waveguide's phase constant. Assuming there are no sources within the free-space-filled pipe determine the:
 \begin{itemize}
-\item[(a)] Corresponding instantaneous magnetic field components inside the conducting pipe.
+\item[(a)] Corresponding instantaneous magnetic field components inside the conducting pipe.\\
 \item[(b)] Phase constant \( \beta_z \).
 \item[(c)] The height of the waveguide is \( b \).
 \end{itemize}
@@ -178,7 +223,7 @@ Determine the corresponding:
     \item[(d)] Time-harmonic displacement current density vector.
     \item[(e)] Time-harmonic polarization current density vector defined as the partial derivative of the corresponding electric polarization vector.
 \end{itemize}
-Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
+Leave your answers in terms of \( \epsilon_0, \mu_0 \).
 
 % Problem 2.25
 \section*{Problem 2.25}
@@ -190,7 +235,7 @@ Aluminum has a static conductivity of about \( \sigma = 3.96 \times 10^7 \, \tex
     \item[(d)] Electric current flowing through the square cross section of the wafer.
     \item[(e)] Electron density \( N_e \).
 \end{itemize}
-Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
+Leave your answers in terms of \( \epsilon_0, \mu_0 \).
 
 
 % References (if any)
@@ -198,3 +243,7 @@ Leave your answers in terms of \( \varepsilon_0, \mu_0 \).
 \bibliography{references/references}
 
 \end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
