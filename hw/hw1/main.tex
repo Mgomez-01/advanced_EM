@@ -70,11 +70,11 @@ In this document, we use standard notation for electromagnetic theory. Key equat
 
 \subsection*{Vector Notation}
 \begin{itemize}
-  \item $\mathbf{E}$: Electric field intensity
-  \item $\mathbf{H}$: Magnetic field intensity
-  \item $\mathbf{D}$: Electric flux density
-  \item $\mathbf{B}$: Magnetic flux density
-  \item $\mathbf{J}$: Current density
+  \item $\bm{\mathcal{E}}$: Electric field intensity
+  \item $\bm{\mathcal{H}}$: Magnetic field intensity
+  \item $\bm{\mathcal{D}}$: Electric flux density
+  \item $\bm{\mathcal{B}}$: Magnetic flux density
+  \item $\bm{\mathcal{J}}$: Current density
   \item $\rho_v$: Volume charge density
 \end{itemize}
 
@@ -97,13 +97,13 @@ In integral form, Maxwell's equations are given by:
 
 \subsection*{Other Relevant Equations}
 \begin{itemize}
-  \item Continuity Equation: $\nabla \cdot \mathbf{J} + \partial_t \rho_v = 0$
-  \item Relationship between $\mathbf{E}$, $\mathbf{D}$: $\mathbf{D} = \epsilon \mathbf{E}$
-  \item Relationship between $\mathbf{H}$, $\mathbf{B}$: $\mathbf{B} = \mu \mathbf{H}$
+  \item Continuity Equation: $\nabla \cdot \bm{\mathcal{J}} + \partial_t \rho_v = 0$
+  \item Relationship between $\bm{\mathcal{E}}$, $\bm{\mathcal{D}}$: $\bm{\mathcal{D}} = \epsilon \bm{\mathcal{E}}$
+  \item Relationship between $\bm{\mathcal{H}}$, $\bm{\mathcal{B}}$: $\bm{\mathcal{B}} = \mu \bm{\mathcal{H}}$
 \end{itemize}
 
 \subsection*{Boundary Conditions}
-Discuss the boundary conditions for $\mathbf{E}$, $\mathbf{H}$, $\mathbf{D}$, and $\mathbf{B}$ at interfaces between different media.
+Discuss the boundary conditions for $\bm{\mathcal{E}}$, $\bm{\mathcal{H}}$, $\bm{\mathcal{D}}$, and $\bm{\mathcal{B}}$ at interfaces between different media.
 
 \section*{Problem 1.3}
 The electric flux density inside a cube is given by:
@@ -140,48 +140,48 @@ Determine the corresponding vector:
   we can find this using the following expression for the Electric field intensity vector:
   \begin{align*}
     \epsilon_{poly} &= 2.56\epsilon_0 \\
-    \mathbf{D} &= \epsilon\mathbf{E}\\
-    \mathbf{E} &= \epsilon^{-1}\mathbf{D} = 0.390625\epsilon_0^{-1}\cdot\mathbf{D} = \epsilon_0^{-1} (2.34\cdot a_x\ +\ 1.17\cdot a_z)
+    \bm{\mathcal{D}} &= \epsilon\bm{\mathcal{E}}\\
+    \bm{\mathcal{E}} &= \epsilon^{-1}\bm{\mathcal{D}} = 0.390625\epsilon_0^{-1}\cdot\bm{\mathcal{D}} = \epsilon_0^{-1} (2.34\cdot a_x\ +\ 1.17\cdot a_z)
   \end{align*}
 \item[(b)] Electric polarization vector inside the polystyrene.\\ 
   we can find this using the following expression for the polarization vector:
   \begin{align*}
-    \mathbf{P}_e &= \epsilon_0\chi_e\mathbf{E}\\
+    \bm{\mathcal{P}}_e &= \epsilon_0\chi_e\bm{\mathcal{E}}\\
     \chi_e = \epsilon_r- 1 &= 2.56 - 1 = 1.56 \\
-    \mathbf{P}_e = 1.56\textcolor{red}{\cancelto{\textcolor{black}{1}}{\textcolor{black}{\epsilon_0\epsilon_0^{-1}}}} (2.34\cdot a_x\ &+\ 1.17\cdot a_z) = 3.6504\cdot a_x\ +\ 1.8252\cdot a_z 
+    \bm{\mathcal{P}}_e = 1.56\textcolor{red}{\cancelto{\textcolor{black}{1}}{\textcolor{black}{\epsilon_0\epsilon_0^{-1}}}} (2.34\cdot a_x\ &+\ 1.17\cdot a_z) = 3.6504\cdot a_x\ +\ 1.8252\cdot a_z 
   \end{align*}
 \item[(c)] Electric flux density inside the air medium.\\ 
   By the continuity of tangential components at the boundary: \\
-  $\mathbf{\hat n}\times(\mathbf{E}_2 - \mathbf{E}_1) = 0$\\
+  $\mathbf{\hat n}\times(\bm{\mathcal{E}}_2 - \bm{\mathcal{E}}_1) = 0$\\
   we apply the following.
   \begin{align*}
-    \mathbf{E}_{air} &= \mathbf{E}_{Poly}\\
-    \mathbf{D}_{air} &= \epsilon_{air}\mathbf{E}_{air}\\
-    \therefore \mathbf{D}_{air}\epsilon_{air}^{-1} &=  \mathbf{D}_{Poly}\epsilon_{Poly }^{-1}\\
-    \mathbf{D}_{air} &= \frac{\epsilon_{air}}{\epsilon_{Poly}}\mathbf{D}_{Poly} = \frac{\textcolor{red}{\cancel{\textcolor{black}{\epsilon_0}}}\cdot 1}{\textcolor{red}{\cancel{\textcolor{black}{\epsilon_0}}}\cdot 2.56}\cdot \mathbf{D}_{Poly}\\
+    \bm{\mathcal{E}}_{air} &= \bm{\mathcal{E}}_{Poly}\\
+    \bm{\mathcal{D}}_{air} &= \epsilon_{air}\bm{\mathcal{E}}_{air}\\
+    \therefore \bm{\mathcal{D}}_{air}\epsilon_{air}^{-1} &=  \bm{\mathcal{D}}_{Poly}\epsilon_{Poly }^{-1}\\
+    \bm{\mathcal{D}}_{air} &= \frac{\epsilon_{air}}{\epsilon_{Poly}}\bm{\mathcal{D}}_{Poly} = \frac{\textcolor{red}{\cancel{\textcolor{black}{\epsilon_0}}}\cdot 1}{\textcolor{red}{\cancel{\textcolor{black}{\epsilon_0}}}\cdot 2.56}\cdot \bm{\mathcal{D}}_{Poly}\\
     &= \frac{6}{2.56}a_x  = 2.34\cdot a_x   
   \end{align*}
   The normal components at the boundary are not continuous and therefore we must do more.\\
   The normal is $\hat a_z$\\
-  $\mathbf{\hat n}\cdot (\mathbf{D}_2 - \mathbf{D}_1) = q_{es}$\\
+  $\mathbf{\hat n}\cdot (\bm{\mathcal{D}}_2 - \bm{\mathcal{D}}_1) = q_{es}$\\
   \begin{align*}
-    \hat a_z\cdot (\mathbf{D}_2 - \mathbf{D}_1) &= 0.2 \\
-     \mathbf{D}_{1z} = \mathbf{D}_{2z} - 0.2 &= 3-.2 = 2.8\\
+    \hat a_z\cdot (\bm{\mathcal{D}}_2 - \bm{\mathcal{D}}_1) &= 0.2 \\
+     \bm{\mathcal{D}}_{1z} = \bm{\mathcal{D}}_{2z} - 0.2 &= 3-.2 = 2.8\\
   \end{align*}
 \item[(d)] Electric field intensity inside the air medium.\\ 
-  Again using the expression $\mathbf{D} = \epsilon \mathbf{E}$
+  Again using the expression $\bm{\mathcal{D}} = \epsilon \bm{\mathcal{E}}$
   \begin{align*}
-    \mathbf{D}_{air} &= \epsilon_{air} \mathbf{E}_{air} \\
-    \mathbf{E}_{air} &= \epsilon_{air}^{-1}\mathbf{D}_{air}\\
+    \bm{\mathcal{D}}_{air} &= \epsilon_{air} \bm{\mathcal{E}}_{air} \\
+    \bm{\mathcal{E}}_{air} &= \epsilon_{air}^{-1}\bm{\mathcal{D}}_{air}\\
     &= \epsilon_0^{-1}(2.34\cdot a_x + 2.8\cdot a_z)
   \end{align*}
 \item[(e)] Electric polarization vector inside the air medium.\\ 
-  Again using $\mathbf{P}_e = \epsilon_0\chi_e\mathbf{E}$\\
+  Again using $\bm{\mathcal{P}}_e = \epsilon_0\chi_e\bm{\mathcal{E}}$\\
   \begin{align*}
-    \mathbf{P}_{e_{air}} &= \epsilon_0\chi_{e_{air}}\mathbf{E}_{air}\\
+    \bm{\mathcal{P}}_{e_{air}} &= \epsilon_0\chi_{e_{air}}\bm{\mathcal{E}}_{air}\\
                          &= \chi_{e_{air}}\textcolor{red}{\cancelto{\textcolor{black}{1}}{\textcolor{black}{\epsilon_0\epsilon_0^{-1}}}}(2.34\cdot a_x + 2.8\cdot a_z)\\
     \chi_{e_{air}} &= \epsilon_{r_{air}} - 1 = 1-1=0\\
-    \therefore \mathbf{P}_{e_{air}} = \mathbf{0}
+    \therefore \bm{\mathcal{P}}_{e_{air}} = \mathbf{0}
   \end{align*}
 \end{itemize}
 Leave your answers in terms of \( \epsilon_0, \mu_0 \).
@@ -193,7 +193,28 @@ The instantaneous magnetic flux density in free space is given by:
 {\bm{\mathcal{B}}} = \hat{a}_x B_x \cos(2y) \sin(\omega t - \pi z) + \hat{a}_y B_y \cos(2x) \cos(\omega t - \pi z)
 \]
 where \( B_x \) and \( B_y \) are constants. Assuming there are no sources at the observation points \( x, y \), determine the electric displacement current density.\\
-  We can obtain the electric displacement current $\bm{J}_d$ by using the expression  
+We can obtain the electric displacement current $\mathcal{J}_d$ by using the following expressions:
+\begin{align}
+  \nabla \times \bm{H} &= \bm{J}_i +  \bm{J}_c +  \bm{J}_d\label{h_current}\\
+  \bm{B} &= \mu \bm{H}\label{h_b_relation}\\
+  \bm{J}_d &= \frac{\partial\bm{D}}{\partial t}\label{displacement_curr}
+\end{align}
+\newpage
+\noindent
+We take $\bm{J}_i +  \bm{J}_c$ to be 0 since we have no sources at the observation points. Using expression \ref{h_current} and solving expression \ref{h_b_relation} for $\bm{H}$:
+\begin{align*}
+  \nabla \times \bm{H} &= \bm{J}_d\label{h_current}\\
+  \bm{J}_d &= \nabla \times \mu^{-1}\bm{B}\\
+  \bm{J}_d &= \mu^{-1}\nabla \times \bm{B}\\
+  &= \mu^{-1} \left[\hat a_x\left(\frac{\partial\bm{B}_z}{\partial y} - \frac{\partial\bm{B}_y}{\partial z}\right) - \hat a_y\left( \frac{\partial\bm{B}_z}{\partial x} - \frac{\partial\bm{B}_x}{\partial z}  \right) + \hat a_z\left( \frac{\partial\bm{B}_y}{\partial x} -  \frac{\partial\bm{B}_x}{\partial y}\right)\right]\\
+  \bm{B}_z &= 0\\
+  &= \mu^{-1}\left[\hat a_x\left(0 - \frac{\partial\bm{B}_y}{\partial z}\right) - \hat a_y\left( 0 - \frac{\partial\bm{B}_x}{\partial z}  \right) + \hat a_z\left( \frac{\partial\bm{B}_y}{\partial x} -  \frac{\partial\bm{B}_x}{\partial y}\right)\right]\\
+  &= \mu^{-1}\left[-\hat a_x \frac{\partial\bm{B}_y}{\partial z} + \hat a_y \frac{\partial\bm{B}_x}{\partial z} + \hat a_z\left(\frac{\partial\bm{B}_y}{\partial x} -  \frac{\partial\bm{B}_x}{\partial y}\right)\right]\\
+  \frac{\partial\bm{B}_x}{\partial z} & = -\pi B_x \cos(2y) \cos(\omega t - \pi z)\\
+  \frac{\partial\bm{B}_y}{\partial z} & = \pi B_y \cos(2x) \sin(\omega t - \pi z)\\
+  \bm{\mathcal{B}} &= \hat{a}_x B_x \cos(2y) \sin(\omega t - \pi z) + \hat{a}_y B_y \cos(2x) \cos(\omega t - \pi z)
+\end{align*}
+
 
 % Problem 1.20
 \section*{Problem 1.20}
