@@ -212,7 +212,11 @@ We take $\bm{J}_i +  \bm{J}_c$ to be 0 since we have no sources at the observati
   &= \mu^{-1}\left[-\hat a_x \frac{\partial\bm{B}_y}{\partial z} + \hat a_y \frac{\partial\bm{B}_x}{\partial z} + \hat a_z\left(\frac{\partial\bm{B}_y}{\partial x} -  \frac{\partial\bm{B}_x}{\partial y}\right)\right]\\
   \frac{\partial\bm{B}_x}{\partial z} & = -\pi B_x \cos(2y) \cos(\omega t - \pi z)\\
   \frac{\partial\bm{B}_y}{\partial z} & = \pi B_y \cos(2x) \sin(\omega t - \pi z)\\
-  \bm{\mathcal{B}} &= \hat{a}_x B_x \cos(2y) \sin(\omega t - \pi z) + \hat{a}_y B_y \cos(2x) \cos(\omega t - \pi z)
+  \frac{\partial\bm{B}_y}{\partial x} & = -2\sin(2x)cos(\omega t - \pi z)\\
+  \frac{\partial\bm{B}_x}{\partial y} & = -2\sin(2y)sin(\omega t - \pi z)\\
+  &= \mu^{-1} \left[\hat a_x(- \pi B_y \cos(2x) \sin(\omega t - \pi z) ) \\
+  &+ \hat a_y (-\pi B_x \cos(2y) \cos(\omega t - \pi z))\\
+  &\hat a_z 2(\sin(2y)sin(\omega t - \pi z) - \sin(2x)cos(\omega t - \pi z))] \\
 \end{align*}
 
 
@@ -224,12 +228,34 @@ The instantaneous electric field inside a conducting rectangular pipe (waveguide
 \]
 where \( \beta_z \) is the waveguide's phase constant. Assuming there are no sources within the free-space-filled pipe determine the:
 \begin{itemize}
-\item[(a)] Corresponding instantaneous magnetic field components inside the conducting pipe.\\
+\item[(a)] Corresponding instantaneous magnetic field components inside the conducting pipe. ($\vec{H}$)\\
 \item[(b)] Phase constant \( \beta_z \).
-\item[(c)] The height of the waveguide is \( b \).
 \end{itemize}
+The height of the waveguide is \( b \).
+This can be found by relating $\bm{\mathcal{E}}$ to $\bm{\mathcal{H}}$ and we know how to get there using the instantaneous forms of these:
+\begin{align*}
+  \bm{\mathcal{E}} &= -j \omega\mu\nabla \times \bm{\mathcal{H}} \\
+  \bm{\mathcal{H}} &= \frac{j}{\omega\mu}\nabla \times \bm{\mathcal{E}}
+\end{align*}
+\begin{align*}
+  \frac{j}{\omega\mu}  \nabla \times \bm{\mathcal{E}} &=  \frac{j}{\omega\mu} \left[\hat a_x\left(\frac{\partial\bm{E}_z}{\partial y} - \frac{\partial\bm{E}_y}{\partial z}\right) - \hat a_y\left( \frac{\partial\bm{E}_z}{\partial x} - \frac{\partial\bm{E}_x}{\partial z}  \right) + \hat a_z\left( \frac{\partial\bm{E}_y}{\partial x} -  \frac{\partial\bm{E}_x}{\partial y}\right)\right]
+\end{align*}
 
-    
+\begin{align*}
+  \frac{j}{\omega\mu}  \nabla \times \bm{\mathcal{E}} &=  \frac{j}{\omega\mu} \left[\hat a_x\left(0 - \frac{\partial\bm{E}_y}{\partial z}\right) - \hat a_y\left( 0 - 0  \right) + \hat a_z\left( \frac{\partial\bm{E}_y}{\partial x} -  0\right)\right] \\
+  \frac{j}{\omega\mu}  \nabla \times \bm{\mathcal{E}} &=  -\frac{j}{\omega\mu} \left[\hat a_x \frac{\partial\bm{E}_y}{\partial z} - \hat a_z \frac{\partial\bm{E}_y}{\partial x}\right]\\
+  \bm{\mathcal{E}} &= \hat{a}_y E_0 \sin\left(\frac{\pi x}{a}\right) \cos(\omega t - \beta_z z)\\
+  \frac{\partial\bm{E}_y}{\partial x} &= \left( \frac{\pi}{a}\right) E_0 \cos\left(\frac{\pi x}{a}\right)\cos(\omega t - \beta_z z) \\
+  \frac{\partial\bm{E}_y}{\partial z} &= \left( \beta_z\right) E_0 \sin\left(\frac{\pi x}{a}\right)\sin(\omega t - \beta_z z) \\
+  \bm{\mathcal{H}} &= -\frac{j}{\omega\mu} \left[\hat a_x \left( \beta_z\right) E_0 \sin\left(\frac{\pi x}{a}\right)\sin(\omega t - \beta_z z) - \hat a_z \left( \frac{\pi}{a}\right) E_0 \cos\left(\frac{\pi x}{a}\right)\cos(\omega t - \beta_z z)\right]\\
+   |\bm{\mathcal{H}}| &= |-\frac{j}{\omega\mu} E_0\left[\right]|
+\end{align*}
+Since there is no source components here or external driving, both $\bm{\mathcal{J}}_c$ and $\bm{\mathcal{J}}_i$ are 0.
+\begin{align*}
+  \nabla \times \bm{\mathcal{H}} &= \frac{\partial \bm{\mathcal{D}}}{\partial t}
+\end{align*}
+
+\newpage
 % Problem 2.18
 \section*{Problem 2.18}
 The time-varying electric field inside a lossless dielectric material of polystyrene, of infinite dimensions and with a relative permittivity (dielectric constant) of 2.56, is given by:
@@ -238,7 +264,10 @@ The time-varying electric field inside a lossless dielectric material of polysty
 \]
 Determine the corresponding:
 \begin{itemize}
-    \item[(a)] Electric susceptibility of the dielectric material.
+\item[(a)] Electric susceptibility of the dielectric material.
+  \begin{align*}
+    \chi_e = \epsilon_r - 1 = 1.56
+  \end{align*}
     \item[(b)] Time-harmonic electric flux density vector.
     \item[(c)] Time-harmonic electric polarization vector.
     \item[(d)] Time-harmonic displacement current density vector.
@@ -266,5 +295,6 @@ Leave your answers in terms of \( \epsilon_0, \mu_0 \).
 \end{document}
 %%% Local Variables:
 %%% mode: latex
+%%% TeX-master: t
 %%% TeX-master: t
 %%% End:
