@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.22)  21 JAN 2024 23:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.22)  22 JAN 2024 13:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -500,47 +500,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 64.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 69.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 64.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 69.
 
 LaTeX Font Info:    Trying to load font information for U+BOONDOX-cal on input 
-line 64.
+line 69.
 (/usr/share/texlive/texmf-dist/tex/latex/boondox/uboondox-cal.fd
 File: uboondox-cal.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX
 -cal.
 )
-LaTeX Font Info:    Font shape `U/BOONDOX-cal/m/n' will be
-(Font)              scaled to size 12.0pt on input line 64.
-LaTeX Font Info:    Font shape `U/BOONDOX-cal/m/n' will be
-(Font)              scaled to size 8.0pt on input line 64.
-LaTeX Font Info:    Font shape `U/BOONDOX-cal/m/n' will be
-(Font)              scaled to size 6.0pt on input line 64.
 LaTeX Font Info:    Font shape `U/BOONDOX-cal/b/n' will be
-(Font)              scaled to size 12.0pt on input line 73.
+(Font)              scaled to size 12.0pt on input line 69.
 LaTeX Font Info:    Font shape `U/BOONDOX-cal/b/n' will be
-(Font)              scaled to size 8.0pt on input line 73.
+(Font)              scaled to size 8.0pt on input line 69.
 LaTeX Font Info:    Font shape `U/BOONDOX-cal/b/n' will be
-(Font)              scaled to size 6.0pt on input line 73.
+(Font)              scaled to size 6.0pt on input line 69.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 163--167
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+LaTeX Font Info:    Font shape `U/BOONDOX-cal/m/n' will be
+(Font)              scaled to size 12.0pt on input line 114.
+LaTeX Font Info:    Font shape `U/BOONDOX-cal/m/n' will be
+(Font)              scaled to size 8.0pt on input line 114.
+LaTeX Font Info:    Font shape `U/BOONDOX-cal/m/n' will be
+(Font)              scaled to size 6.0pt on input line 114.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 159--163
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
-[5]
-./main.tex:220: Extra }, or forgotten \right.
+[4] [5]
+./main.tex:216: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.220 \end{align*}
+l.216 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -548,10 +549,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:220: Missing \right. inserted.
+./main.tex:216: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.220 \end{align*}
+l.216 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -559,10 +560,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:220: Missing } inserted.
+./main.tex:216: Missing } inserted.
 <inserted text> 
                 }
-l.220 \end{align*}
+l.216 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -570,10 +571,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:220: Extra }, or forgotten \right.
+./main.tex:216: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.220 \end{align*}
+l.216 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -581,10 +582,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:220: Missing \right. inserted.
+./main.tex:216: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.220 \end{align*}
+l.216 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -592,10 +593,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:220: Missing } inserted.
+./main.tex:216: Missing } inserted.
 <inserted text> 
                 }
-l.220 \end{align*}
+l.216 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -604,43 +605,48 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (10.09558pt too wide) detected at line 220
+Overfull \hbox (10.09558pt too wide) detected at line 216
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 [6]
-Overfull \hbox (18.97473pt too wide) detected at line 242
+Overfull \hbox (18.97473pt too wide) detected at line 238
 []
  []
 
 
-Overfull \hbox (73.40263pt too wide) detected at line 252
+Overfull \hbox (73.40263pt too wide) detected at line 247
 []
  []
 
 [7]
-Overfull \hbox (10.86667pt too wide) in paragraph at lines 261--262
+Overfull \hbox (50.02243pt too wide) detected at line 263
+[]
+ []
+
+
+Overfull \hbox (10.86667pt too wide) in paragraph at lines 267--268
 \OT1/cmr/m/n/12 The time-varying elec-tric field in-side a loss-less di-elec-tr
 ic ma-te-rial of polystyrene,
  []
 
-(./main.bbl [8]) [9] (./main.aux)
+[8] [9] (./main.bbl) [10] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B382DE545AD31596853DCBD72652349B;108.
  ) 
 Here is how much of TeX's memory you used:
- 14293 strings out of 478287
- 247871 string characters out of 5849288
- 549603 words of memory out of 5000000
+ 14294 strings out of 478287
+ 247878 string characters out of 5849288
+ 550605 words of memory out of 5000000
  32215 multiletter control sequences out of 15000+600000
  488907 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,20n,80p,523b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,20n,80p,523b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
@@ -649,21 +655,21 @@ s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-wasy-type1/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox
-/zxxbw8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxrw8a.
-pfb>
-Output written on main.pdf (9 pages, 223290 bytes).
+/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/wasy-typ
+e1/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxbw8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
+Output written on main.pdf (10 pages, 218988 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
