@@ -29,10 +29,14 @@
     "cancel"
     "tikz")
    (TeX-add-symbols
+    '("Cross" 2)
+    '("delCross" 1)
     "daystilldue"
     "hourstilldue"
     "minutestilldue"
     "TimeUntilDue")
+   (LaTeX-add-labels
+    "deriv_expression")
    (LaTeX-add-bibliographies
     "references/references"))
  :latex)
