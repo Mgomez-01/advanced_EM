@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{mathrsfs}
+\usepackage[calc]{datetime2}
+\usepackage{boondox-cal}
+\usepackage{bm} % For bold math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\DTMsavenow{now}
+\DTMsavedate{DueDate}{2024-02-21}
+
+\newcount\daystilldue
+\newcount\hourstilldue
+\newcount\minutestilldue
+
+% Calculate the difference in days
+\DTMsaveddatediff{DueDate}{now}{\daystilldue}
+
+% Calculate the difference in hours and minutes
+\hourstilldue=\DTMfetchhour{DueDate}
+\advance\hourstilldue by -\DTMfetchhour{now}
+\minutestilldue=\DTMfetchminute{DueDate}
+\advance\minutestilldue by -\DTMfetchminute{now}
+
+% Adjust for negative values
+\ifnum\hourstilldue<0
+  \advance\hourstilldue by 24
+  \advance\daystilldue by -1
+\fi
+\ifnum\minutestilldue<0
+  \advance\minutestilldue by 60
+  \advance\hourstilldue by -1
+\fi
+
+\newcommand{\TimeUntilDue}{
+  \ifnum\daystilldue<4
+    \textcolor{red}{
+    \number\daystilldue\ days - 
+    \number\hourstilldue\ hours - 
+    \number\minutestilldue\ min until deadline!!
+  }
+\else
+    \number\daystilldue\ days - 
+    \number\hourstilldue\ hours - 
+    \number\minutestilldue\ min until deadline
+  \fi
+}
+
+
+
+% Save the original \BibTeX command in case you need it later
+\let\originalBibTeX\BibTeX
+
+% Redefine the \BibTeX command to display the LaTeX logo
+\renewcommand{\BibTeX}{{\rmfamily B\kern-.03em{\sffamily ib}\kern-.15em\TeX}}
+
+
+\newcommand{\delCross}[1]{
+  \left[\hat a_x\left(\frac{\partial\bm{#1}_z}{\partial y} - \frac{\partial\bm{#1}_y}{\partial z}\right) - \hat a_y\left( \frac{\partial\bm{#1}_z}{\partial x} - \frac{\partial\bm{#1}_x}{\partial z}  \right) + \hat a_z\left( \frac{\partial\bm{#1}_y}{\partial x} -  \frac{\partial\bm{#1}_x}{\partial y}\right)\right]
+}
+\begin{document}
+
+\newcommand{\Cross}[2]{
+\hat a_x(#1_2#2_3 -#1_3#2_2) -\hat a_y(#1_1#2_3-#1_3#2_1) + \hat a_z(#1_1#2_2-#1_2#2_1) 
+}
+\title{ECE 6310 - Advanced Electromagnetic Fields: Homework Set \#3}
+\author{Miguel Gomez}
+%\date{\TimeUntilDue}
+\maketitle
+
+%\begin{center}
+%  $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$\\
+%$\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+%\end{center}
+\section{Preliminaries}
+In this document, we use standard notation for electromagnetic theory. Key equations and concepts are summarized below:
+
+\subsection*{Vector Notation}
+\begin{itemize}
+  \item $\bm{\mathcal{E}}$: Electric field intensity
+  \item $\bm{\mathcal{H}}$: Magnetic field intensity
+  \item $\bm{\mathcal{D}}$: Electric flux density
+  \item $\bm{\mathcal{B}}$: Magnetic flux density
+  \item $\bm{\mathcal{J}}$: Current density
+  \item $\rho_v$: Volume charge density
+\end{itemize}
+
+\subsection*{Differential Operators}
+\begin{itemize}
+  \item $\nabla \cdot\ \ $: Divergence of a vector field
+  \item $\nabla \times\ \ $: Curl of a vector field
+  \item $\nabla\ \ $: Gradient of a scalar field
+  \item $\partial_i\ \ $: Partial derivative with respect to the independent basis element $i$
+\end{itemize}
+
+\subsection*{Maxwell's Equations}
+In integral form, Maxwell's equations are given by:
+\begin{align}
+  \oint_{\partial V} \bm{\mathcal{E}} \cdot d\bm{\mathcal{l}} &= - \frac{d}{dt} \int_{V} \bm{\mathcal{B}} \cdot d\bm{\mathcal{S}} & \text{(Faraday's Law of Induction)} \\
+  \oint_{\partial V} \bm{\mathcal{H}} \cdot d\bm{\mathcal{l}} &= \int_{V} \bm{\mathcal{J}} \cdot d\bm{\mathcal{S}} + \frac{d}{dt} \int_{V} \bm{\mathcal{D}} \cdot d\bm{\mathcal{S}} & \text{(Ampère's Circuital Law)} \\
+  \oiint_{\partial V} \bm{\mathcal{D}} \cdot d\bm{\mathcal{S}} &= \int_{V} \rho_v dV & \text{(Gauss's Law for Electricity)} \\
+  \oiint_{\partial V} \bm{\mathcal{B}} \cdot d\bm{\mathcal{S}} &= 0 & \text{(Gauss's Law for Magnetism)}
+\end{align}
+
+\subsection*{Other Relevant Equations}
+\begin{itemize}
+  \item Continuity Equation: $\nabla \cdot \bm{\mathcal{J}} + \partial_t \rho_v = 0$
+  \item Relationship between $\bm{\mathcal{E}}$, $\bm{\mathcal{D}}$: $\bm{\mathcal{D}} = \epsilon \bm{\mathcal{E}}$
+  \item Relationship between $\bm{\mathcal{H}}$, $\bm{\mathcal{B}}$: $\bm{\mathcal{B}} = \mu \bm{\mathcal{H}}$
+\end{itemize}
+
+\subsection*{Boundary Conditions}
+Discuss the boundary conditions for $\bm{\mathcal{E}}$, $\bm{\mathcal{H}}$, $\bm{\mathcal{D}}$, and $\bm{\mathcal{B}}$ at interfaces between different media.
+\newpage
+
+% References (if any)
+\bibliographystyle{plain}
+\bibliography{references/references}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
