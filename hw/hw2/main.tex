@@ -11,6 +11,9 @@
 \usepackage{amssymb}
 \usepackage{cancel}
 \usepackage{tikz}
+\usepackage{subcaption}
+\usepackage[margin=0.75in]{geometry}
+
 \usetikzlibrary{arrows}
 
 \DTMsavenow{now}
@@ -321,9 +324,8 @@ Values are in reference to the 0 point origin at the boundary, oriented towards 
                      &= \frac{4}{3}\ \left[\frac{mV}{m}\right]
 \end{align*}  
 \end{itemize}
-
+\newpage
 \section*{Problem 5.9}
-
 A uniform plane wave traveling in air is incident normally on a half space occupied by a lossless dielectric medium of relative permittivity of 4. The reflections can be eliminated by placing another dielectric slab, $\frac{\lambda}{4}$ thick, between the air and the original dielectric medium, as shown in Figure P5-9. To accomplish this, the intrinsic impedance $\eta_1$ of the slab must be equal to $\sqrt{\eta_0\eta_2}$ where $\eta_0$ and $\eta_2$ are, respectively, the intrinsic impedances of air and the original dielectric medium. Assuming that the relative permeabilities of all the media are unity, what should the relative permittivity of the dielectric slab be to accomplish this?
 \begin{center}
 \begin{tikzpicture}[scale=1.5, axis/.style={->, >=stealth'}]
@@ -368,11 +370,68 @@ Plugging in the values for what we know:
   \eta_1 &= \sqrt{\frac{\mu_{r1}}{\epsilon_{r1}}}\eta_0 = \sqrt{\eta_0\eta_2} = \sqrt{\frac{1}{2}\eta_0^2} = \sqrt{\frac{1}{2}}\ \eta_0
 \end{align*}
 Now we set the expression for $\eta_1$ equal to the expression we have, and solve for the permittivity:
+\newpage
 \begin{align*}
   \eta_1 = \sqrt{\frac{\mu_{r1}}{\epsilon_{r1}}}\eta_0 &= \sqrt{\frac{1}{2}}\ \eta_0\\
   \therefore\ \ \sqrt{\frac{\mu_{r1}}{\epsilon_{r1}}} &= \sqrt{\frac{1}{2}}
 \end{align*}
 If we have $\mu_{r1} = 1$ then we can say that the relative permittivity of the middle slab should be $2$.
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=17cm]{./images/Go1_5-9_final.png}
+    \caption{S11 ans S21 results}
+    \label{fig:S11_21}
+  \end{figure}
+\end{center}
+
+This example in fig. \ref{fig:S11_21} shows the S-parameters of the design. The materials used are Silicon-Dioxide for the base, a customized teflon derivative with permitivitty 2, and embedded in vacuum.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[ht]
+\centering
+% First row, left image
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{./images/Go1_5-9_final.png}
+  \caption{First subfigure}
+  \label{fig:sub1}
+\end{subfigure}
+\hfill % This adds some space between the two subfigures
+% First row, right image
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{./images/Go1_5-9_model.png}
+  \caption{Second subfigure}
+  \label{fig:sub2}
+\end{subfigure}
+
+% Second row, left image
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{images/} 
+  \caption{Third subfigure}
+  \label{fig:sub3}
+\end{subfigure}
+\hfill % This adds some space between the two subfigures
+% Second row, right image
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{./images/Go1_5-9_final.png}
+  \caption{Fourth subfigure}
+  \label{fig:sub4}
+\end{subfigure}
+
+\caption{Overall caption for all subfigures.}
+\label{fig:1}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \section*{Problem 5.21}
 A uniform plane wave traveling in a lossless dielectric is incident normally on a flat interface formed by the presence of air. For $\epsilon_r$ ’s of 2.56, 4, 9, 16, 25, and 81:
 \begin{itemize}
@@ -394,10 +453,6 @@ and parallel polarizations versus incidence angle.
 
 % References (if any)
 \bibliographystyle{plain}
-\bibliography{references/references}
+\bibliography{references/references} 
 
 \end{document}
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
