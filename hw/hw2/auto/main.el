@@ -4,7 +4,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "12pt")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("datetime2" "calc")))
+                     '(("datetime2" "calc") ("geometry" "margin=0.75in")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
@@ -25,21 +25,26 @@
     "boondox-cal"
     "bm"
     "amsmath"
-    "amsthm"
     "amssymb"
     "cancel"
-    "tikz")
+    "tikz"
+    "subcaption"
+    "geometry")
    (TeX-add-symbols
     '("Cross" 2)
     '("delCross" 1)
     "daystilldue"
     "hourstilldue"
     "minutestilldue"
-    "TimeUntilDue"
-    "originalBibTeX"
-    "innerradius"
-    "outerradius"
-    "ellipseangle")
+    "TimeUntilDue")
+   (LaTeX-add-labels
+    "deriv_expression"
+    "fig:S11_21"
+    "fig:teflon"
+    "fig:model"
+    "fig:sio2"
+    "fig:both_materials"
+    "fig:collection")
    (LaTeX-add-bibliographies
     "references/references"))
  :latex)

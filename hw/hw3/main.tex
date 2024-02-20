@@ -7,10 +7,10 @@
 \usepackage[calc]{datetime2}
 \usepackage{boondox-cal}
 \usepackage{bm} % For bold math symbols
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amsmath,amsthm,amssymb}
 \usepackage{cancel}
 \usepackage{tikz}
+\usetikzlibrary{3d,calc}
 \usetikzlibrary{arrows}
 
 \DTMsavenow{now}
@@ -130,19 +130,94 @@ Show that for observations made at very large distances $(\beta r \gg 1)$ the el
   \end{align*}
 \end{center}
 
-
 \section{- 6.20}
-
+For 6.19, show that
+\begin{itemize}
+\item the time average power density is:
+  \begin{align*}
+    \mathbf{S} &= \frac{1}{2}\text{Re}{[\mathbf{E}\times\mathbf{H}^*]}% more goes here
+  \end{align*}
+\item Radiation Intensity
+\item Radiated Power
+\item Directivity
+\item Radiation Resistance
+\end{itemize}
 
 \section{- 6.25}
+The current distribution on a very thin wire dipole antenna of overall length $\ell$ is given by:
+\[
+I_e = 
+\begin{cases} 
+\hat{a} z I_0 \sin [\beta\left(\frac{\ell}{2} - z'\right)] & \text{if } 0 \leq z' \leq \frac{\ell}{2} \\
+\hat{a} z I_0 \sin [\beta\left(\frac{\ell}{2} + z'\right)] & \text{if } -\frac{\ell}{2} \leq z' \leq 0
+\end{cases}
+\]
+where I0 is a constant. Representing the distance R of (6-112) by the far-field approximations of (6-112a) through (6-112b), derive the far-zone electric and magnetic fields radiated by the dipole using (6-97a) and the far-field formulations of Section 6.7
 
 
 \section{- 6.26}
+ Show that the radiated far-zone electric and magnetic fields derived in Problem 6.25 reduce for a half-wavelength dipole $(\ell = \frac{\lambda}{2})$ to:
+\[
+E_{\theta} \approx j \eta \frac{I_0 e^{-j \beta r}}{2\pi r} 
+\left[\frac{\cos\left(\frac{\pi}{2} \cos \theta\right)}{
+\sin \theta}\right]
+\]
 
+\[
+H_{\phi} \approx \frac{E_{\theta}}{\eta}
+\]
 
+\[
+E_r \approx E_{\phi} \approx H_r \approx H_{\theta} \approx 0
+\]
+
+ 
 \section{- 6.38}
+A coaxial line of inner and outer radii $a$ and $b$, respectively, is mounted on an infinite
+conducting ground plane. Assuming that the electric field over the aperture of the coax is:
+\[
+E_a = -\hat{a}_{\rho} \frac{V}{\varepsilon \ln(b/a) \rho'}
+\]
+\begin{center}
+  $\text{where } a \leq \rho' \leq b$
+\end{center}
+where V is the applied voltage and ε is the permittivity of medium in the coax, find the far-zone spherical electric and magnetic field components radiated by the aperture.
+\newpage
+\begin{center}
+  \begin{tikzpicture}[scale=2,tdplot_main_coords]
 
+    % Define the radii
+    \def\innerradius{0.5}
+    \def\outerradius{1}
+    \def\ellipseangle{0}
 
+    % Draw the annulus as ellipses due to the perspective
+    \begin{scope}[rotate=\ellipseangle]
+        \shade[inner color=gray!80,outer color=gray!30,opacity=0.75] (0,0) ellipse ({\outerradius} and {0.5*\outerradius});
+        \fill[white] (0,0) ellipse ({\innerradius} and {0.3*\innerradius});
+    \end{scope}
+
+    % Draw the outer shaded area
+    \fill[gray!30,opacity=0.5] (-1.5,-1.5) rectangle (1.75,1.75);
+
+    % Draw the arrows and labels
+    \draw[-{Latex[length=3mm]}] (0,0) -- (2.5,0) node[anchor=south east] {$y$};
+    \draw[-{Latex[length=3mm]}] (0,0) -- (0,2.5) node[anchor=north west] {$z$};
+    \draw[-{Latex[length=3mm]}] (0,0) -- (-1.5,-1.5) node[anchor=north] {$x$};
+
+    % Label the radii and other parameters
+    \begin{scope}[rotate=\ellipseangle]
+        \draw (0,0) -> node[midway,above] {$a$} (-\innerradius/2,.15);
+        \draw (0,0) -> node[midway,above] {$b$} ({-\outerradius/2},.45);
+    \end{scope}
+    \node[anchor=south] at (0,-.5) {$\varepsilon$};
+    \node at (1.3,-1.3) {$\sigma = \infty$};
+
+    % Label the figure
+    \node[below] at (current bounding box.south) {Figure P6-38};
+\end{tikzpicture}
+
+\end{center}
 \section{- 7.3}
 
 
@@ -156,3 +231,8 @@ Show that for observations made at very large distances $(\beta r \gg 1)$ the el
 \bibliography{references/references}
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:

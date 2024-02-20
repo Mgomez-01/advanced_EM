@@ -395,43 +395,49 @@ This example in fig. \ref{fig:S11_21} shows the S-parameters of the design. The 
 % First row, left image
 \begin{subfigure}[b]{0.45\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{./images/Go1_5-9_final.png}
-  \caption{First subfigure}
-  \label{fig:sub1}
+  \includegraphics[width=\textwidth]{./images/S11_21_teflon_alone.png}
+  \caption{Teflon alone}
+  \label{fig:teflon}
 \end{subfigure}
 \hfill % This adds some space between the two subfigures
 % First row, right image
 \begin{subfigure}[b]{0.45\textwidth}
   \centering
   \includegraphics[width=\textwidth]{./images/Go1_5-9_model.png}
-  \caption{Second subfigure}
-  \label{fig:sub2}
+  \caption{3D model in Ansys}
+  \label{fig:model}
 \end{subfigure}
 
 % Second row, left image
 \begin{subfigure}[b]{0.45\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{images/} 
-  \caption{Third subfigure}
-  \label{fig:sub3}
+  \includegraphics[width=\textwidth]{./images/S11_21_Si-O2_alone.png} 
+  \caption{Si-O2 alone}
+  \label{fig:sio2}
 \end{subfigure}
 \hfill % This adds some space between the two subfigures
 % Second row, right image
 \begin{subfigure}[b]{0.45\textwidth}
   \centering
   \includegraphics[width=\textwidth]{./images/Go1_5-9_final.png}
-  \caption{Fourth subfigure}
-  \label{fig:sub4}
+  \caption{Combined together}
+  \label{fig:both_materials}
 \end{subfigure}
 
-\caption{Overall caption for all subfigures.}
-\label{fig:1}
+\caption{Collection of design results}
+\label{fig:collection}
 \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\newpage
+Above in this figure, we can see the results agree with what we expected. Using a permitivitty of 2 cancels out the reflections. The design used $\approx 10mm$ for the thickness of the teflon.
+\begin{align*}
+  \lambda &= \frac{v_p}{f\sqrt{\mu\epsilon}}\\
+  \lambda &= \frac{c}{f} = \frac{3e^8}{3e^{10}}\\
+  \lambda &= 10 [mm]
+\end{align*}
+\newpage
 \section*{Problem 5.21}
 A uniform plane wave traveling in a lossless dielectric is incident normally on a flat interface formed by the presence of air. For $\epsilon_r$ ’s of 2.56, 4, 9, 16, 25, and 81:
 \begin{itemize}
@@ -456,3 +462,8 @@ and parallel polarizations versus incidence angle.
 \bibliography{references/references} 
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
