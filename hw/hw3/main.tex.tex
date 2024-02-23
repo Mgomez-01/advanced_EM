@@ -1,3 +1,35 @@
+% Created 2024-02-21 Wed 23:41
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{amsmath,amsthm,amssymb}
+\author{Miguel}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Miguel},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.4.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
 \documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -6,7 +38,7 @@
 \usepackage{mathrsfs}
 \usepackage[calc]{datetime2}
 \usepackage{boondox-cal}
-\usepackage{bm} % For bold math symbols
+\usepackage{bm} \% For bold math symbols
 \usepackage{amsmath,amsthm,amssymb,amsbsy}
 \usepackage{gensymb}
 \usepackage{cancel}
@@ -21,16 +53,16 @@
 \newcount\hourstilldue
 \newcount\minutestilldue
 
-% Calculate the difference in days
+\% Calculate the difference in days
 \DTMsaveddatediff{DueDate}{now}{\daystilldue}
 
-% Calculate the difference in hours and minutes
+\% Calculate the difference in hours and minutes
 \hourstilldue=\DTMfetchhour{DueDate}
 \advance\hourstilldue by -\DTMfetchhour{now}
 \minutestilldue=\DTMfetchminute{DueDate}
 \advance\minutestilldue by -\DTMfetchminute{now}
 
-% Adjust for negative values
+\% Adjust for negative values
 \ifnum\hourstilldue<0
   \advance\hourstilldue by 24
   \advance\daystilldue by -1
@@ -40,32 +72,32 @@
   \advance\hourstilldue by -1
 \fi
 
-\newcommand{\TimeUntilDue}{
+\newcommand{\TimeUntilDue}\{
   \ifnum\daystilldue<4
-    \textcolor{red}{
-    \number\daystilldue\ days - 
-    \number\hourstilldue\ hours - 
-    \number\minutestilldue\ min until deadline!!
-  }
+    \textcolor{red}\{
+    \number\daystilldue$\backslash$ days - 
+    \number\hourstilldue$\backslash$ hours - 
+    \number\minutestilldue$\backslash$ min until deadline!!
+  \}
 \else
-    \number\daystilldue\ days - 
-    \number\hourstilldue\ hours - 
-    \number\minutestilldue\ min until deadline
+    \number\daystilldue$\backslash$ days - 
+    \number\hourstilldue$\backslash$ hours - 
+    \number\minutestilldue$\backslash$ min until deadline
   \fi
-}
+\}
 
 
 
-% Save the original \BibTeX command in case you need it later
+\% Save the original \BibTeX command in case you need it later
 \let\originalBibTeX\BibTeX
 
-% Redefine the \BibTeX command to display the LaTeX logo
-\renewcommand{\BibTeX}{{\rmfamily B\kern-.03em{\sffamily ib}\kern-.15em\TeX}}
+\% Redefine the \BibTeX command to display the \LaTeX{} logo
+\renewcommand{\BibTeX}\{\{\rmfamily B\kern-.03em\{\sffamily ib\}\kern-.15em\TeX\}\}
 
 
-\newcommand{\delCross}[1]{
-  \left[\hat a_x\left(\frac{\partial\bm{#1}_z}{\partial y} - \frac{\partial\bm{#1}_y}{\partial z}\right) - \hat a_y\left( \frac{\partial\bm{#1}_z}{\partial x} - \frac{\partial\bm{#1}_x}{\partial z}  \right) + \hat a_z\left( \frac{\partial\bm{#1}_y}{\partial x} -  \frac{\partial\bm{#1}_x}{\partial y}\right)\right]
-}
+\newcommand{\delCross}[1]\{
+  \left[\hat a\textsubscript{x\left}(\frac\{\(\partial\)\bm{#1}\textsubscript{z}\}\{\(\partial\) y\} - \frac\{\(\partial\)\bm{#1}\textsubscript{y}\}\{\(\partial\) z\}\right) - \hat a\textsubscript{y\left}( \frac\{\(\partial\)\bm{#1}\textsubscript{z}\}\{\(\partial\) x\} - \frac\{\(\partial\)\bm{#1}\textsubscript{x}\}\{\(\partial\) z\}  \right) + \hat a\textsubscript{z\left}( \frac\{\(\partial\)\bm{#1}\textsubscript{y}\}\{\(\partial\) x\} -  \frac\{\(\partial\)\bm{#1}\textsubscript{x}\}\{\(\partial\) y\}\right)\right]
+\}
 \begin{document}
 
 \newcommand{\Cross}[2]{
@@ -125,7 +157,7 @@ Show that for observations made at very large distances $(\beta r \gg 1)$ the el
 \begin{center}
   \begin{align*}
     E_{\theta} &= j\eta \frac{\beta \bm{I}_e\ell e^{-j\beta r}}{4 \pi r} \sin{(\theta)}\\
-    H_{\phi} &\approx \frac{E_{\theta}}{\eta}\\
+    H_{\phi} &\approx \frac{E_{theta}}{\eta}\\
     E_{r} &\approx 0\\
     E_{\phi} &= H_r = H_{\theta} = 0
   \end{align*}
@@ -147,50 +179,37 @@ For 6.19, show that
 \item the time average power density is:
   \begin{align*}
     \mathbf{S} &= \frac{1}{2}\text{Re}{[\mathbf{E}\times\mathbf{H}^*]} = \hat a_r W_{av} = \hat a_r W_{r}\\
-    [\mathbf{E}\times\mathbf{H}^*] &= \frac{a_r}{r\sin{\left(\theta\right)}}\left(E_{\theta}H^*_{\phi}-E_{\phi}H^*_{\theta}\right) - \frac{a_\theta}{r}\left(E_{r}H^*_{\phi}-E_{\phi}H^*_{r}\right) + \frac{a_\phi}{r}\left(E_{r}H^*_{\theta}-E_{\theta}H^*_{r}\right)\\
-    [\mathbf{E}\times\mathbf{H}^*] &= \frac{a_r}{r\sin{\left(\theta\right)}}\left(E_{\theta}\frac{E^*_{\theta}}{\eta}-E_{\phi}0\right) - \frac{a_\theta}{r}\left(0\frac{E^*_{\theta}}{\eta}-E_{\phi}0\right) + \frac{a_\phi}{r}\left(00-E_{\theta}0\right)\\
-    \frac{1}{2}[\mathbf{E}\times\mathbf{H}^*] &= \frac{a_r}{2r\sin{\left(\theta\right)}}\left(E_{\theta}\frac{E^*_{\theta}}{\eta}\right) = \frac{a_r}{2r\eta\sin{\left(\theta\right)}}\left(E_{\theta}E^*_{\theta}\right)\\
-    \frac{1}{2}[\mathbf{E}\times\mathbf{H}^*] &= \frac{a_r}{2r\sin{\left(\theta\right)}}\left(E_{\theta}\frac{E^*_{\theta}}{\eta}\right) \\
-    &= \frac{a_r}{2r\eta\sin{\left(\theta\right)}}\left(\left|j\eta \frac{\beta \bm{I}_e\ell e^{-j\beta r}}{4 \pi r} \sin{(\theta)}\right|\right)^2\\
-    &= \frac{a_r}{2r\eta\sin{\left(\theta\right)}}\left(\eta \frac{\beta \bm{I}_e\ell}{4 \pi r}\right)^2 \sin{(\theta)}^2\\
-    &= a_r\frac{\eta}{2r\sin{\left(\theta\right)}}\left( \frac{ \bm{I}_e\ell}{2 \lambda r}\right)^2 \sin{(\theta)}^2\\
-    &= a_r\frac{\eta}{8r^3\sin{\left(\theta\right)}}\left( \frac{ \bm{I}_e\ell}{\lambda}\right)^2 \sin{(\theta)}^2\\
-    &= a_r\frac{1}{r\sin{\left(\theta\right)}}\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \left(\frac{\sin{(\theta)}}{r}\right)^2
+    \nabla \times \mathbf{A} &= \frac{1}{r \sin \theta}
+
   \end{align*}
-  It appears I included an erroneous factor of $\frac{1}{r\sin{\left(\theta\right)}}$. I believe that came from the conversion to spherical cross product. 
+  \[
+\nabla \times \mathbf{A} = \frac{\hat{a}_r}{r \sin \theta}\left[\frac{\partial}{\partial \theta} (A_\phi \sin \theta) - \frac{\partial A_\theta}{\partial \phi}\right] + \frac{\hat{a}_{\theta}}{r}\left[ \frac{\partial r A_r}{\partial \phi} - \frac{\partial A_\phi}{\partial r}\right]
+\begin{pmatrix}
+ \\
+\hat{a}_\phi
+\end{pmatrix} \times
+\begin{pmatrix}
+ \\
+ \\
+\frac{1}{r} \frac{\partial A_\theta}{\partial r} - \frac{1}{r \sin \theta} \frac{\partial}{\partial \theta} (r A_\phi)
+\end{pmatrix}
+\]
+
 \item Radiation Intensity
     \begin{align*}
-      \mathbf{U} &= r^2S_{av} = \frac{\eta}{8}\left|\frac{\mathbf{I}_o\ell}{\lambda}\right|^2  \sin{(\theta)}^2= r^2a_r\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \left(\frac{\sin{(\theta)}}{r}\right)^2 \\
-                 &= a_r\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \sin{(\theta)}^2
-    \end{align*}
+    \mathbf{U} &= r^2S_{av} = \frac{\eta}{8}\left|\frac{\mathbf{I}_o\ell}{\lambda}\right|^2 % more goes here
+  \end{align*}
 \item Radiated Power
     \begin{align*}
-      \mathbf{P}_{rad} &= \int_0^{2\pi}\int_0^{\pi}\mathbf(U)(\theta,\phi)\times \sin{(\theta)}d\theta d\phi = \eta\left(\frac{\pi}{3}\right)\left|\frac{\mathbf{I}_o\ell}{\lambda}\right|^2\\
-      \mathbf{P}_{rad} &= \int_0^{2\pi}\int_0^{\pi}a_r\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \sin{(\theta)}^3d\theta d\phi \\
-      \sin^2{\theta} + \cos^2{\theta} &= 1 \xrightarrow{\ \ \ \ \ } \sin^2{\theta} = 1 - \cos^2{\theta}\\
-      \mathbf{P}_{rad} &= \int_0^{2\pi}\int_0^{\pi}a_r\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \sin{(\theta)}^2\sin{(\theta)}d\theta d\phi \\
-      \mathbf{P}_{rad} &= a_r\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \int_0^{2\pi}\int_0^{\pi}(1 - \cos^2{\theta})\sin{(\theta)}d\theta d\phi \\
-      \mathbf{P}_{rad} &= a_r\frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2 \int_0^{2\pi}\int_0^{\pi}(\sin{(\theta)} - \cos^2{\theta}\sin{(\theta)})d\theta d\phi \\
-                       &= \int_0^{2\pi}\int_0^{\pi}(\sin{(\theta)} - \cos^2{\theta}\sin{(\theta)})d\theta d\phi = 2\pi \int_0^{\pi}(\sin{(\theta)} - \cos^2{\theta}\sin{(\theta)})d\theta \\
-                       &= 2\pi \left(\int_0^{\pi}\sin{(\theta)}d\theta - \int_0^{\pi}\cos^2{\theta}\sin{(\theta)}d\theta\right)\\
-                       &= 2\pi \left(|-\cos{(\theta)}|_0^{\pi} + \frac{1}{3}\cos^3{(\theta)}|_0^{\pi}\right)\\
-                       &= 2\pi \left((2) + \frac{1}{3}\cos^3{(\theta)}|_0^{\pi}\right)\\
-                       &= 2\pi \left((2) - \frac{2}{3}\right)\\
-                       &= 4\pi \left(\frac{2}{3}\right)\\
-                       &= 8\pi \left(a_r\frac{\eta}{8\cdot 3}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2\right) = a_r \left(\eta\frac{\pi}{3}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2\right) 
-    \end{align*}
-
+    \mathbf{P}_{rad} &= \int_0^{2\pi}\int_0^{\pi}\mathbf(U)(\theta,\phi)\times \sin{(\theta)}d\thetad\phi = \eta\left(\frac{\pi}{3}\right)\left|\frac{\mathbf{I}_o\ell}{\lambda}\right|^2
+  \end{align*}
 \item Directivity
   \begin{align*}
-    \mathbf{D}_o &=\frac{4\pi\mathbf{U}_{max}(\theta,\phi)}{\mathbf{P}_{rad}} \\
-    \mathbf{U}_{max} &= \frac{\eta}{8}\left| \frac{ \bm{I}_e\ell}{\lambda}\right|^2\frac{4\pi}{\eta\left(\frac{\pi}{3}\right)\left|\frac{\mathbf{I}_o\ell}{\lambda}\right|^2} = \frac{12}{8} = 1.5
+    \mathbf{D}_o &=\frac{4\pi\mathbf{U}_{max}(\theta,\phi)}{\mathbf{P}_{rad}} 
   \end{align*}
 \item Radiation Resistance
   \begin{align*}
-    \mathbf{R}_{rad} &=\frac{2\mathbf{P}_{rad}}{|\mathbf{I}_{0}|^2} = 80\pi^2\left(\frac{\ell}{\lambda}\right)^2 \\
-                     &= \frac{2\eta\left(\frac{\pi}{3}\right)\left|\frac{\mathbf{I}_o\ell}{\lambda}\right|^2}{|\mathbf{I}_o|^2}\\
-    \eta &\approx  120\pi\\
-                     &= 240\left(\frac{\pi^2}{3}\right)\left|\frac{\ell}{\lambda}\right|^2 = 80\left(\pi^2\right)\left|\frac{\ell}{\lambda}\right|^2           
+    \mathbf{R}_{rad} &=\frac{2\mathbf{P}_{rad}}{|\mathbf{I}_{0}|^2} = 80\pi^2\left(\frac{\ell}{\lambda}\right)^2 
   \end{align*}
 \end{itemize}
 
@@ -199,39 +218,13 @@ The current distribution on a very thin wire dipole antenna of overall length $\
 \[
 I_e = 
 \begin{cases} 
-\hat{a}_z I_0 \sin [\beta\left(\frac{\ell}{2} - z'\right)] & \text{if } 0 \leq z' \leq \frac{\ell}{2} \\
-\hat{a}_z I_0 \sin [\beta\left(\frac{\ell}{2} + z'\right)] & \text{if } -\frac{\ell}{2} \leq z' \leq 0
+\hat{a} z I_0 \sin [\beta\left(\frac{\ell}{2} - z'\right)] & \text{if } 0 \leq z' \leq \frac{\ell}{2} \\
+\hat{a} z I_0 \sin [\beta\left(\frac{\ell}{2} + z'\right)] & \text{if } -\frac{\ell}{2} \leq z' \leq 0
 \end{cases}
 \]
-where $I_0$ is a constant. Representing the distance R of (6-112) by the far-field approximations of (6-112a) through (6-112b), derive the far-zone electric and magnetic fields radiated by the dipole using (6-97a) and the far-field formulations of Section 6.7
+where I0 is a constant. Representing the distance R of (6-112) by the far-field approximations of (6-112a) through (6-112b), derive the far-zone electric and magnetic fields radiated by the dipole using (6-97a) and the far-field formulations of Section 6.7
 
-Using the distance $R$ in the approximation, we can replace the $I(x',y',z')$ with the expression above and simplify to an integral over the line in terms of $z'$. From section 6.7:
 
-\begin{align*}
-  \mathbf{E}_A &\approx -j\omega \mathbf{A}\\
-  E_r &\approx 0\\
-  E_{\theta} &\approx -j\omega A_{\theta}\\
-  E_{\phi} &\approx -j\omega A_{\phi}
-\end{align*}
-These allow is to solve using only the parts we need to worry about, namely the $\theta$ and $\phi$ components since $E_r\approx 0$.
-\newpage
-\noindent
-We can convert the integrand $I(x',y',z')$ into a function of just $z'$ by integrating from $-\frac{\ell}{2}$ to $\frac{\ell}{2}$, noting that the $d\ell$ becomes $dz'$ and $R$ is a function of the new triangle formed by the $r'$ and $r$ vectors show in (6-112a). The $R$ can be taken as the base of the new triangle making the value equal to:
-\begin{align*}
-  R &= r'\cos{(\theta)}\\
-    &\int_{-\frac{\ell}{2}}^{\frac{\ell}{2}}I_0(z')e^{-j\beta r'\cos{\theta}}dz' \\
-    &=\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r}  \int_{-\frac{\ell}{2},0}^{0,\frac{\ell}{2}}\sin \left[\beta\left(\frac{\ell}{2} \pm z'\right)\right]e^{-j\beta z'\cos{\theta}}dz'
-\end{align*}
-We can skip the integration by parts and use the expression:
-\begin{align*}
-  \int \sin{(ax)}\,e^{bx}\,dx={\frac {e^{bx}}{a^{2}+b^{2}}}\left(b\sin{(ax)}-a\cos{(ax)}\right)
-\end{align*}
-Which is a well known result.
-\begin{align*}
-  a &= -1,1\\
-  b &= -j\beta\cos{(\theta)}\\
-  x &= z'
-\end{align*}
 \section{- 6.26}
  Show that the radiated far-zone electric and magnetic fields derived in Problem 6.25 reduce for a half-wavelength dipole $(\ell = \frac{\lambda}{2})$ to:
 \[
@@ -361,7 +354,8 @@ ground plane:
 
 \end{document}
 
-%%% Local Variables:
-%%% mode: LaTeX
-%%% TeX-master: t
-%%% End:
+\%\%\% Local Variables:
+\%\%\% mode: \LaTeX{}
+\%\%\% \TeX{}-master: t
+\%\%\% End:
+\end{document}

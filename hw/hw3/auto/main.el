@@ -27,6 +27,8 @@
     "amsmath"
     "amsthm"
     "amssymb"
+    "amsbsy"
+    "gensymb"
     "cancel"
     "tikz")
    (TeX-add-symbols
