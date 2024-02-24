@@ -219,7 +219,7 @@ These allow is to solve using only the parts we need to worry about, namely the 
 We can convert the integrand $I(x',y',z')$ into a function of just $z'$ by integrating from $-\frac{\ell}{2}$ to $\frac{\ell}{2}$, noting that the $d\ell$ becomes $dz'$ and $R$ is a function of the new triangle formed by the $r'$ and $r$ vectors show in (6-112a). The $R$ can be taken as the base of the new triangle making the value equal to:
 \begin{align*}
   R &= r'\cos{(\theta)}\\
-    &\int_{-\frac{\ell}{2}}^{\frac{\ell}{2}}I_0(z')e^{-j\beta r'\cos{\theta}}dz' \\
+    A&= \int_{-\frac{\ell}{2}}^{\frac{\ell}{2}}I_0(z')e^{-j\beta r'\cos{\theta}}dz' \\
     &=\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r}  \int_{-\frac{\ell}{2},0}^{0,\frac{\ell}{2}}\sin \left[\beta\left(\frac{\ell}{2} \pm z'\right)\right]e^{-j\beta z'\cos{\theta}}dz'
 \end{align*}
 We can skip the integration by parts and use the expression:
@@ -231,10 +231,27 @@ Which is a well known result.
   a &= -1,1\\
   b &= -j\beta\cos{(\theta)}\\
   x &= z'\\
-    &=\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r} \left[-\frac{e^{(-j\beta \cos{(\theta)})z'}}{1-(\beta \cos{(\theta)})^{2}}\left((j\beta \cos{(\theta)})\sin{\left(\frac{\ell}{2}+z'\right)}+\cos{\left(\frac{\ell}{2}+z'\right)}\right)\right]\right|_{-\frac{\ell}{2}}^{0} \\
-    &+  \hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r} \left[\frac {e^{(-j\beta \cos{(\theta)})z'}}{1-(\beta\cos{(\theta)})^{2}}\left((-j\beta \cos{(\theta)})\sin{\left(\frac{\ell}{2}-z'\right)}+\cos{\left(\frac{\ell}{2}-z'\right)}\right)\right]\right|_{0}^{\frac{\ell}{2}}\\
+    &=\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r} \left[-\frac{e^{(-j\beta \cos{(\theta)})z'}}{1-(\beta \cos{(\theta)})^{2}} \left((j\beta \cos{(\theta)}) \sin{\left(\frac{\ell}{2}+z'\right)} + \cos{\left(\frac{\ell}{2}+z'\right)}\right)\right] \right|_{-\frac{\ell}{2}}^{0} \\
+    &+  \hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r} \left[\frac {e^{(-j\beta \cos{(\theta)})z'}}{1-(\beta\cos{(\theta)})^{2}}\left((-j\beta \cos{(\theta)})\sin{\left(\frac{\ell}{2}-z'\right)}+\cos{\left(\frac{\ell}{2}-z'\right)}\right)\right]\right|_{0}^{\frac{\ell}{2}}
 \end{align*}
-
+From here the simplification takes a bit to get to so I am skipping some steps. The parts that have a $\sin$ in them will either come to $\ell$ or $0$, and those with $\cos$ will either come to $\ell$ or $1$ due to the $0$. Simplifying the expression considerably. 
+\begin{align*}
+  A &=\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r}\cdot \left[\frac {e^{(j\beta \cos{(\theta)})\frac{\ell}{2}}  \left((j\beta \cos{(\theta)})
+      \cancelto{0}{\sin{\left(\frac{\ell}{2}+z'\right)}  } + 1\right)
+      }{1-(\beta\cos{(\theta)})^{2}}\ \ \right]
+\end{align*} 
+\begin{align*}
+   &-\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r}\cdot \left[\frac {\cancelto{1}{e^{(j\beta \cos{(\theta)})0}}  \left((j\beta \cos{(\theta)})
+      \sin{\left(\frac{\ell}{2}\right)}  + \cos(\frac{\ell}{2})\right)
+      }{1-(\beta\cos{(\theta)})^{2}}\ \ \right]
+\end{align*}
+The second side also shares a symmetry in the result. The second integral shares the second term from the first with opposing signs, so those will cancel Simplifying brings to
+\begin{align*}
+  A &= \hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{2\pi r}\cdot \left[\frac {e^{(j\beta \cos{(\theta)})\frac{\ell}{2}} + \cos\left(\frac{\ell}{2}\right)
+      }{1-(\beta\cos{(\theta)})^{2}}\ \ \right]\\
+  E &= -j\omega A
+\end{align*}
+Plugging in the $\omega$ and $j$ with a negative sign, and manipulating in some way with identities or some clever subs with Eulers identity will probably be the thing that gets us to the end. Once we have $E$, obtaining $H$ is simple using the expressions in (6-97)   
 \section{- 6.26}
  Show that the radiated far-zone electric and magnetic fields derived in Problem 6.25 reduce for a half-wavelength dipole $(\ell = \frac{\lambda}{2})$ to:
 \[
@@ -250,7 +267,19 @@ H_{\phi} \approx \frac{E_{\theta}}{\eta}
 \[
 E_r \approx E_{\phi} \approx H_r \approx H_{\theta} \approx 0
 \]
-*Note: Verify your solutions for the far field $E_{theta}$ for a half-wavelength dipole (6.26) in HFSS; design the antenna to be resonant at $1GHz$.
+*Note: Verify your solutions for the far field $E_{theta}$ for a half-wavelength dipole (6.26) in HFSS; design the antenna to be resonant at $1GHz$.\\
+
+Using $\ell = \frac{\lambda}{2}$ simplifies the exponent and the argument in the $\cos$ to something in terms of a half of $\pi$. Therefore, the line above would have a $\cos$ go to $0$ leaving us with a single term as expected. But looking it over, I would need some clever substitutions that I am not seeing immediately to convert the expression as we want it for the end. I am also not sure how I can convert my $\sin$ in the numerator, and $1-(\beta\cos(\theta))^2$ in the denominator into just a $\sin$ in the denominator. Perhaps I have made an error in my work and ended up with an incorrect expression. The rest of the approximate terms follow from the same expressions used for simplification in the previous problem. 
+
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=17cm]{./images/fig6-4c.png}
+    \caption{S11 results of antenna rad zone}
+    \label{fig:S11_21}
+  \end{figure}
+\end{center}
+I am not entirely sure how I would verify this, but I did put together the antenna and here are the results/model. 
 \newpage
 \section{- 6.38}
 A coaxial line of inner and outer radii $a$ and $b$, respectively, is mounted on an infinite
@@ -262,7 +291,6 @@ E_a = -\hat{a}_{\rho} \frac{V}{\varepsilon \ln(\frac{b}{a}) \rho\ '}
   $\text{where } a \leq \rho\ ' \leq b$
 \end{center}
 where V is the applied voltage and ε is the permittivity of medium in the coax, find the far-zone spherical electric and magnetic field components radiated by the aperture.
-\newpage
 \begin{center}
   \begin{tikzpicture}[scale=2,tdplot_main_coords]
 
@@ -298,6 +326,7 @@ where V is the applied voltage and ε is the permittivity of medium in the coax,
 \end{tikzpicture}
 
 \end{center}
+
 \section{- 7.3}
 An infinitesimal vertical magnetic dipole of length l and constant current Im is placed symmetrically about the origin and it is directed along the z axis, as shown in Figure 6-2 a. Derive expressions valid every- where, near and far field, for the:
 \begin{itemize}
