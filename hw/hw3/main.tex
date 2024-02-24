@@ -216,7 +216,7 @@ Using the distance $R$ in the approximation, we can replace the $I(x',y',z')$ wi
 These allow is to solve using only the parts we need to worry about, namely the $\theta$ and $\phi$ components since $E_r\approx 0$.
 \newpage
 \noindent
-We can convert the integrand $I(x',y',z')$ into a function of just $z'$ by integrating from $-\frac{\ell}{2}$ to $\frac{\ell}{2}$, noting that the $d\ell$ becomes $dz'$ and $R$ is a function of the new triangle formed by the $r'$ and $r$ vectors show in (6-112a). The $R$ can be taken as the base of the new triangle making the value equal to:
+We can convert the integrand $I(x',y',z')$ into a function of just $z'$ by integrating from $-\frac{\ell}{2}$ to $\frac{\ell}{2}$, noting that the $d\ell$ becomes $dz'$ and $R$ is a function of the new triangle formed by the $r'$ and $r$ vectors show in (6-112a) from \cite{balanis_2012}. The $R$ can be taken as the base of the new triangle making the value equal to:
 \begin{align*}
   R &= r'\cos{(\theta)}\\
     A&= \int_{-\frac{\ell}{2}}^{\frac{\ell}{2}}I_0(z')e^{-j\beta r'\cos{\theta}}dz' \\
@@ -270,16 +270,26 @@ E_r \approx E_{\phi} \approx H_r \approx H_{\theta} \approx 0
 *Note: Verify your solutions for the far field $E_{theta}$ for a half-wavelength dipole (6.26) in HFSS; design the antenna to be resonant at $1GHz$.\\
 
 Using $\ell = \frac{\lambda}{2}$ simplifies the exponent and the argument in the $\cos$ to something in terms of a half of $\pi$. Therefore, the line above would have a $\cos$ go to $0$ leaving us with a single term as expected. But looking it over, I would need some clever substitutions that I am not seeing immediately to convert the expression as we want it for the end. I am also not sure how I can convert my $\sin$ in the numerator, and $1-(\beta\cos(\theta))^2$ in the denominator into just a $\sin$ in the denominator. Perhaps I have made an error in my work and ended up with an incorrect expression. The rest of the approximate terms follow from the same expressions used for simplification in the previous problem. 
-
 \begin{center}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=17cm]{./images/fig6-4c.png}
-    \caption{S11 results of antenna rad zone}
-    \label{fig:S11_21}
+    \includegraphics[width=15cm]{./images/6-26.png}
+    \caption{S11 results of antenna}
+    \label{fig:S11}
   \end{figure}
 \end{center}
-I am not entirely sure how I would verify this, but I did put together the antenna and here are the results/model. 
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{./images/model.png}
+    \caption{model of antenna}
+    \label{fig:Model}
+  \end{figure}
+\end{center}
+\begin{center}
+Final dimensions found by optimization to get the best match:\\$l= 2 \cdot h =132.24$mm\\$r=2.606$mm\\$d=2.09$mm
+\end{center}
+I am not entirely sure how I would verify this in HFSS, but I did put together the antenna and here are the results/model. 
 \newpage
 \section{- 6.38}
 A coaxial line of inner and outer radii $a$ and $b$, respectively, is mounted on an infinite
@@ -290,7 +300,7 @@ E_a = -\hat{a}_{\rho} \frac{V}{\varepsilon \ln(\frac{b}{a}) \rho\ '}
 \begin{center}
   $\text{where } a \leq \rho\ ' \leq b$
 \end{center}
-where V is the applied voltage and ε is the permittivity of medium in the coax, find the far-zone spherical electric and magnetic field components radiated by the aperture.
+where V is the applied voltage and $\epsilon$ is the permittivity of medium in the coax, find the far-zone spherical electric and magnetic field components radiated by the aperture.
 \begin{center}
   \begin{tikzpicture}[scale=2,tdplot_main_coords]
 
@@ -324,8 +334,13 @@ where V is the applied voltage and ε is the permittivity of medium in the coax,
     % Label the figure
     \node[below] at (current bounding box.south) {Figure P6-38};
 \end{tikzpicture}
-
 \end{center}
+\newpage
+\textcolor{white}{  }
+\newpage
+\newpage
+\textcolor{white}{  }
+\newpage
 
 \section{- 7.3}
 An infinitesimal vertical magnetic dipole of length l and constant current Im is placed symmetrically about the origin and it is directed along the z axis, as shown in Figure 6-2 a. Derive expressions valid every- where, near and far field, for the:
@@ -351,6 +366,12 @@ An infinitesimal vertical magnetic dipole of length l and constant current Im is
   \mathbf{R}_{r} = \frac{2\mathbf{P}_{rad}}{|I_m|^2}
   \end{align*}
 \end{itemize}
+\newpage
+\textcolor{white}{  }
+\newpage
+\textcolor{white}{  }
+\newpage
+
 \section{- 7.15}
 An infinitesimal electric dipole is placed at an angle of $30\degree$ at a height $h$ above a perfectly conducting electric ground plane. Determine the location and orientation of its image. Do this by sketching the image.
 \begin{center}
@@ -372,14 +393,29 @@ An infinitesimal electric dipole is placed at an angle of $30\degree$ at a heigh
 
     % Label
     \node[below] at (0,-2.5) {Figure P7-15};
-
 \end{tikzpicture}
-
 \end{center}
+\begin{center}
+  \begin{tikzpicture}
+
+    % Ground
+    \fill[green!20] (-2,-2) rectangle (2,0);
+    \draw (-2,0) -- (2,0);
+
+    % Sigma = infinity
+    \node at (1,-1.9) {$\sigma = \infty$};
+
+    % Antenna
+    \draw[thick, dotted] (0,-1.15) -- (1.5,-1.15);
+    \draw[->,thick] (.8,-1.4) -- +(150:1) node[midway, above right, xshift=.5em, yshift=.5em] {};
+    \fill (.425,-1.15) circle (1pt);
+    % Label
+    \node[below] at (0,-3) {Solution};
+\end{tikzpicture}
+\end{center}
+\newpage
 \section{- 7.37}
-For the aperture shown in Figure 6-4c and
-assuming it is mounted on an infinite PEC
-ground plane:
+For the aperture shown in Figure 6-4c and assuming it is mounted on an infinite PEC ground plane:
 \begin{itemize}
 \item [a)] Form the most practical, exact or approximate (when necessary to solve the problem), equivalent currents $\mathbf{J}_s$ and $\mathbf{M}_s$.
 \item [b)] Find the far-zone electric and magnetic fields. The electric field distribution at the aperture is given by ($Eo$ is a constant):\\
@@ -388,6 +424,10 @@ ground plane:
     -\frac{a}{2} \le x\ ' \le \frac{a}{2}\ \ \ &;\ \ \ -\frac{b}{2} \le y\ ' \le \frac{b}{2}
   \end{align*}
 \end{itemize}
+\newpage
+\textcolor{white}{  }
+\newpage
+
 \bibliographystyle{plain}
 \bibliography{references/references}
 
