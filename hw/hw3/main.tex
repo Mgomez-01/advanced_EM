@@ -224,14 +224,17 @@ We can convert the integrand $I(x',y',z')$ into a function of just $z'$ by integ
 \end{align*}
 We can skip the integration by parts and use the expression:
 \begin{align*}
-  \int \sin{(ax)}\,e^{bx}\,dx={\frac {e^{bx}}{a^{2}+b^{2}}}\left(b\sin{(ax)}-a\cos{(ax)}\right)
+  \int \sin{(ax)}\,e^{bx}\,dx&={\frac {e^{bx}}{a^{2}+b^{2}}}\left(b\sin{(ax)}-a\cos{(ax)}\right)
 \end{align*}
 Which is a well known result.
 \begin{align*}
   a &= -1,1\\
   b &= -j\beta\cos{(\theta)}\\
-  x &= z'
+  x &= z'\\
+    &=\hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r} \left[-\frac{e^{(-j\beta \cos{(\theta)})z'}}{1-(\beta \cos{(\theta)})^{2}}\left((j\beta \cos{(\theta)})\sin{\left(\frac{\ell}{2}+z'\right)}+\cos{\left(\frac{\ell}{2}+z'\right)}\right)\right]\right|_{-\frac{\ell}{2}}^{0} \\
+    &+  \hat{a}_z\frac{\mu I_0\sin{(\theta)}e^{-j\beta r}}{4\pi r} \left[\frac {e^{(-j\beta \cos{(\theta)})z'}}{1-(\beta\cos{(\theta)})^{2}}\left((-j\beta \cos{(\theta)})\sin{\left(\frac{\ell}{2}-z'\right)}+\cos{\left(\frac{\ell}{2}-z'\right)}\right)\right]\right|_{0}^{\frac{\ell}{2}}\\
 \end{align*}
+
 \section{- 6.26}
  Show that the radiated far-zone electric and magnetic fields derived in Problem 6.25 reduce for a half-wavelength dipole $(\ell = \frac{\lambda}{2})$ to:
 \[
@@ -248,7 +251,7 @@ H_{\phi} \approx \frac{E_{\theta}}{\eta}
 E_r \approx E_{\phi} \approx H_r \approx H_{\theta} \approx 0
 \]
 *Note: Verify your solutions for the far field $E_{theta}$ for a half-wavelength dipole (6.26) in HFSS; design the antenna to be resonant at $1GHz$.
- 
+\newpage
 \section{- 6.38}
 A coaxial line of inner and outer radii $a$ and $b$, respectively, is mounted on an infinite
 conducting ground plane. Assuming that the electric field over the aperture of the coax is:
