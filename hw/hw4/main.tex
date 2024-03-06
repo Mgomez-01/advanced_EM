@@ -149,7 +149,18 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
     &= 258.309\ \Omega
   \end{align*}
 \item[(d)] Phase velocity ($v_p$) in $\frac{m}{s}$
-\item[(e)] Group velocity in $\frac{m}{s}$
+\item[(e)] Group velocity in $\frac{m}{s}$ \\
+  This velocity, as well as the group velocity, can be found using expression ($8.49a-c$) from \cite{balanis_2012}. These reduce to a simple expression in ($8-52$) 
+  \begin{align*}
+    v_p &= \frac{v}{\cos{(\Psi)}}\\
+    v_g &= v\cos{(\Psi)}\\
+    \Psi &= \cos{^{-1}\left(\sqrt{1-\left(\frac{f_c}{f}\right)^2}\right)}
+  \end{align*}
+  Since inverse $\cos$ returns an angle, taking the $\cos$ of the inverse is the argument itself.
+  \begin{align*}
+    v_p &= \frac{v}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}\\
+    v_g &= v\sqrt{1-\left(\frac{f_c}{f}\right)^2}
+  \end{align*}
 \end{itemize}
 \newpage
 \section{- 9.14}
