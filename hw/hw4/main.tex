@@ -15,7 +15,7 @@
 \usetikzlibrary{arrows}
 
 \DTMsavenow{now}
-\DTMsavedate{DueDate}{2024-03-11}
+\DTMsavedate{DueDate}{2024-03-12}
 
 \newcount\daystilldue
 \newcount\hourstilldue
@@ -156,13 +156,20 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
     v_g &= v\cos{(\Psi)}\\
     \Psi &= \cos{^{-1}\left(\sqrt{1-\left(\frac{f_c}{f}\right)^2}\right)}
   \end{align*}
-  Since inverse $\cos$ returns an angle, taking the $\cos$ of the inverse is the argument itself.
+  Since inverse $\cos$ returns an angle, taking the $\cos$ of the inverse is the argument to the inverse itself.
   \begin{align*}
     v_p &= \frac{v}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}\\
     v_g &= v\sqrt{1-\left(\frac{f_c}{f}\right)^2}
   \end{align*}
 \end{itemize}
 \newpage
+\noindent
+Since $v$ is the expression $\frac{c}{\sqrt{\epsilon_r}}$, we can input those into the expression and solve for the speeds.
+  \begin{align*}
+    v_p &= \frac{c}{\sqrt{\epsilon_r}\sqrt{1-\left(\frac{f_c}{f}\right)^2}} = \\
+    v_g &= \frac{c}{\sqrt{\epsilon_r}}\sqrt{1-\left(\frac{f_c}{f}\right)^2} = 
+  \end{align*}
+
 \section{- 9.14}
 A circular waveguide with radius of $3 cm$ is made of copper ($\sigma = 5.76 × 107 \frac{S}{m}$). For the dominant $TE_{11}$ and low-loss $TE_{01}$ modes, determine their corresponding cut-off frequencies and attenuation constants (in $\frac{Np}{m}$ and $\frac{dB}{m}$ at a frequency of $7 GHz$. Assume that the waveguide is filled with air.
 \newpage
