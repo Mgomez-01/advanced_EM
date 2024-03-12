@@ -124,7 +124,7 @@ Discuss the boundary conditions for $\bm{\mathcal{E}}$, $\bm{\mathcal{H}}$, $\bm
 A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions of 0.9 in. ($2.286\ cm$) by 0.4 in. ($1.016\ cm$) is filled with lossless polystyrene ($\epsilon_r = 2.56$). For the lowest-order mode of the waveguide, determine at $10 GHz$ the following values.
 \begin{itemize}
 \item[(a)] Cutoff Freq ($f_c$) in $GHz$\\
-  We can find this with expression $(8-16)$ from \cite{balanis_2012} with $a = 2.286\ cm$.
+  We can find this with expression (8-16) from \cite{balanis_2012} with $a = 2.286\ cm$.
   \begin{align*}
     (f_{c})_{mn} &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2}\\
     (f_{c})_{10}  &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{1\pi}{a}\right)^2 + \left(\frac{0\pi}{b}\right)^2}\\
@@ -132,7 +132,7 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
     &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{\pi}{2.86*10^{-2}}\right)^2} = 4.09832 GHz
   \end{align*}
 \item[(b)] Guide wavelength ($\lambda_g$) in $cm$\\
-  This one can be done with a combination of expressions from chapter 8 in \cite{balanis_2012}, $(8-21a,b,c)$. we can do this with $a$ because the frequency in question is $10GHz$ which us above the cutoff found in part $a$.
+  This one can be done with a combination of expressions from chapter 8 in \cite{balanis_2012}, (8-21a,b,c). we can do this with $a$ because the frequency in question is $10GHz$ which us above the cutoff found in part $a$.
   \begin{align*}
     (\lambda_g)_{mn} &= \frac{\lambda}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}\\
                      &= \frac{\lambda}{\sqrt{1-\left(\frac{4.09832e^{9}}{1e^{10}}\right)^2}}\\
@@ -140,7 +140,7 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
                      &= 0.0205419\ [m] = 2.05419\ [cm]
   \end{align*}
 \item[(c)] Wave impedance ($\eta$)\\
-  This can be found with ($8-20a$) in \cite{balanis_2012}.
+  This can be found with (8-20a) in \cite{balanis_2012}.
   \begin{align*}
     Z_w^+ &= \frac{\sqrt{\frac{\mu}{\epsilon}}}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}} = \frac{\eta}{\sqrt{1-\left(\frac{f_c}{f}\right)^2}}\\
     Z_w^+ &= \frac{\sqrt{\frac{\mu_0}{\epsilon_0\epsilon_r}}}{\sqrt{1-\left(.409832\right)^2}} \\
@@ -150,7 +150,7 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
   \end{align*}
 \item[(d)] Phase velocity ($v_p$) in $\frac{m}{s}$
 \item[(e)] Group velocity in $\frac{m}{s}$ \\
-  This velocity, as well as the group velocity, can be found using expression ($8.49a-c$) from \cite{balanis_2012}. These reduce to a simple expression in ($8-52$) 
+  This velocity, as well as the group velocity, can be found using expression (8.49a-c) from \cite{balanis_2012}. These reduce to a simple expression in (8-52) 
   \begin{align*}
     v_p &= \frac{v}{\cos{(\Psi)}}\\
     v_g &= v\cos{(\Psi)}\\
@@ -172,6 +172,25 @@ Since $v$ is the expression $\frac{c}{\sqrt{\epsilon_r}}$, we can input those in
 
 \section{- 9.14}
 A circular waveguide with radius of $3 cm$ is made of copper ($\sigma = 5.76 × 107 \frac{S}{m}$). For the dominant $TE_{11}$ and low-loss $TE_{01}$ modes, determine their corresponding cut-off frequencies and attenuation constants (in $\frac{Np}{m}$ and $\frac{dB}{m}$ at a frequency of $7 GHz$. Assume that the waveguide is filled with air.
+
+This problem can be modeled using CST, or Ansys, and we can also solve for the values directly. Using the expression for the cutoff frequency seen in 9-12a of \cite{balanis_2012}, we can solve for $f_c$, and using expression 9-34a in  \cite{balanis_2012}, we can solve for the attenuation constant for our modes. $\chi_{mn}'$ depends on the mode and can be found with table 9-1 of \cite{balanis_2012}.
+
+\begin{align*}
+  f_c &= \frac{\chi_{mn}'}{2\pi a \sqrt{\mu\epsilon}}\\
+  \alpha_{mn} &= \frac{R_s}{a\eta\sqrt{1-\left(\frac{f_c}{f}\right)^2}}\left[ \left(\frac{f_c}{f}\right)^2 + \frac{m^2}{\chi_{mn}'^2- m^2}  \right]
+\end{align*}
+\begin{itemize}
+\item[$TE_{11}$] : $\chi_{11}' = 1.8412$
+  \begin{itemize}
+    \item [a)] $f_c$
+    \item [b)] $\alpha_c$\\
+  \end{itemize}
+  \item[$TE_{01}$] : $\chi_{01}' = 3.8318$
+  \begin{itemize}
+    \item [a)] $f_c$
+    \item [b)] $\alpha_c$
+  \end{itemize}
+\end{itemize}
 \newpage
 \section{- 11.2}
 A magnetic line source of infinite length and constant magnetic current Im is placed parallel to the z axis at a height h above a PEC ground plane of infinite extent, as shown in Figure 11-2 except that we now have a magnetic line source.
