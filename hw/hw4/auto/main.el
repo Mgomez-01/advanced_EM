@@ -5,12 +5,12 @@
                      '(("article" "12pt")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("datetime2" "calc") ("geometry" "margin=0.75in")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
@@ -41,6 +41,9 @@
     "TimeUntilDue"
     "originalBibTeX")
    (LaTeX-add-labels
+    "fig:8-2"
+    "fig:8-2-2"
+    "fig:ansys_model_8-2"
     "fig:11-2"
     "fig:error_11-20"
     "fig:endResults")

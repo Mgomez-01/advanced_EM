@@ -75,7 +75,8 @@
 }
 \title{ECE 6310 - Advanced Electromagnetic Fields: Homework Set \#4}
 \author{Miguel Gomez}
-\date{\TimeUntilDue}
+\date{\today}
+%\date{\TimeUntilDue}
 \maketitle
 
 %\begin{center}
@@ -141,6 +142,7 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
                      &= \frac{0.0187375}{\sqrt{1-\left(.409832\right)^2}}\\
                      &= 0.0205419\ [m] = 2.05419\ [cm]
   \end{align*}
+  \newpage
 \item[(c)] Wave impedance ($\eta$)\\
   This can be found with (8-20a) in \cite{balanis_2012}.
   \begin{align*}
@@ -164,17 +166,48 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
     v_g &= v\sqrt{1-\left(\frac{f_c}{f}\right)^2}
   \end{align*}
 \end{itemize}
-\newpage
 \noindent
 Since $v$ is the expression $\frac{c}{\sqrt{\epsilon_r}}$, we can input those into the expression and solve for the speeds.
-  \begin{align*}
-    v_p &= \frac{c}{\sqrt{\epsilon_r}\sqrt{1-\left(\frac{f_c}{f}\right)^2}} = 2.05419*10^8 \left[\frac{m}{s}\right] \\
-    v_g &= \frac{c}{\sqrt{\epsilon_r}}\sqrt{1-\left(\frac{f_c}{f}\right)^2} = 1.70916*10^8 \left[\frac{m}{s}\right]
-  \end{align*}
+\begin{align*}
+  v_p &= \frac{c}{\sqrt{\epsilon_r}\sqrt{1-\left(\frac{f_c}{f}\right)^2}} = 2.05419*10^8 \left[\frac{m}{s}\right] \\
+  v_g &= \frac{c}{\sqrt{\epsilon_r}}\sqrt{1-\left(\frac{f_c}{f}\right)^2} = 1.70916*10^8 \left[\frac{m}{s}\right]
+\end{align*}
+\newpage
+\noindent
+As for verifications here, I plotted 4 modes in \ref{fig:8-2} and \ref{fig:8-2-2} and showed that the solution we came up with must apply to the first mode, as expected since we used $T_{mn} = T_{10}$. Since all other values are derived from this first calulation, we can call this verified.
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{./images/im_gamma_plot_8-2.png}
+    \caption{imaginary gamma plot 8-2}
+    \label{fig:8-2}
+  \end{figure}
+\end{center}
+  \begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{./images/re_gamma_plot_8-2.png}
+    \caption{real gamma plot 8-2}
+    \label{fig:8-2-2}
+  \end{figure}
+\end{center}  
+\newpage
+\noindent
+Here is a view of the simulation design in \ref{fig:ansys_model_8-2}. File for remaking project(aedt file) will also be included with the submission:
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{./images/design.png}
+    \caption{3DModel in Ansys}
+    \label{fig:ansys_model_8-2}
+  \end{figure}
+\end{center}
+\newpage
 
 \section{- 9.14}
-A circular waveguide with radius of $3 cm$ is made of copper ($\sigma = 5.76 × 107 \frac{S}{m}$). For the dominant $TE_{11}$ and low-loss $TE_{01}$ modes, determine their corresponding cut-off frequencies and attenuation constants (in $\frac{Np}{m}$ and $\frac{dB}{m}$ at a frequency of $7 GHz$. Assume that the waveguide is filled with air.
+A circular waveguide with radius of $3 cm$ is made of copper ($\sigma = 5.76 × 107 \frac{S}{m}$). For the dominant $TE_{11}$ and low-loss $TE_{01}$ modes, determine their corresponding cut-off frequencies and attenuation constants (in $\frac{Np}{m}$ and $\frac{dB}{m}$ at a frequency of $7 GHz$. Assume that the waveguide is filled with air.\\
 
+\noindent
 This problem can be modeled using CST, or Ansys, and we can also solve for the values directly. Using the expression for the cutoff frequency seen in 9-12a of \cite{balanis_2012}, we can solve for $f_c$, and using expression 9-34a in  \cite{balanis_2012}, we can solve for the attenuation constant for our modes. $\chi_{mn}'$ depends on the mode and can be found with table 9-1 of \cite{balanis_2012}.
 
 \begin{align*}
@@ -215,6 +248,8 @@ A magnetic line source of infinite length and constant magnetic current Im is pl
 \end{center}
 
 \newpage
+\textcolor{white}{test}
+\newpage
 \section{- 11.20}
 For a strip of width $w = 2\lambda$, plot the $\frac{RCS}{\lambda_o^2}$ (in dB) when the length of the strip is $l = 5\lambda$, $10\lambda$ and $20\lambda$ (plot all three graphs on the same figure). Use the approximate relation between the 2D SW and the 3D RCS. Assume normal incidence.\\
 Attempting to solve these was a bit of a challenge in Ansys. I was having issues with getting the answers due to an error that kept crashing the machines. It was the following:
@@ -232,8 +267,8 @@ Because of this, the plot for the $20\lambda$ plot did not work out. It kept fai
 \begin{figure}[h]
   \hspace{-2cm}
   \centering
-    \includegraphics[width=19cm]{./images/rcs_plots_5_10_7-5.png}
-    \caption{plots for $5\lambda$, $7.5\lambda$ and $10\lambda$}
+    \includegraphics[width=19cm]{./images/rcs_plots_multi.png}
+    \caption{plots for various runs without $20\lambda$}
     \label{fig:endResults}
   \end{figure}
 \end{center}

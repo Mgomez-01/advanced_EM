@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.5)  13 MAR 2024 00:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.22)  13 MAR 2024 10:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,7 +275,7 @@ File: pgfcalendar.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))
 \@dtm@julianday=\count282
 ))
-(/home/speedy/texmf/tex/latex/boondox/tex/BOONDOX-cal.sty
+(/home/speedy/texmf/tex/latex/boondox/BOONDOX-cal.sty
 
 LaTeX Warning: You have requested package `boondox-cal',
                but the package provides `BOONDOX-cal'.
@@ -829,12 +829,12 @@ Package gensymb Warning: Not defining \micro.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 80
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 81
 .
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 80
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 81
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -842,14 +842,14 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 80.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 81.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -857,32 +857,32 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 90.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 91.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 90.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 91.
 
 LaTeX Font Info:    Trying to load font information for U+BOONDOX-cal on input 
-line 90.
-(/home/speedy/texmf/tex/latex/boondox/tex/uboondox-cal.fd
+line 91.
+(/usr/share/texlive/texmf-dist/tex/latex/boondox/uboondox-cal.fd
 File: uboondox-cal.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX
 -cal.
 )
 LaTeX Font Info:    Font shape `U/BOONDOX-cal/b/n' will be
-(Font)              scaled to size 12.0pt on input line 90.
+(Font)              scaled to size 12.0pt on input line 91.
 LaTeX Font Info:    Font shape `U/BOONDOX-cal/b/n' will be
-(Font)              scaled to size 8.0pt on input line 90.
+(Font)              scaled to size 8.0pt on input line 91.
 LaTeX Font Info:    Font shape `U/BOONDOX-cal/b/n' will be
-(Font)              scaled to size 6.0pt on input line 90.
+(Font)              scaled to size 6.0pt on input line 91.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 126.
+LaTeX Warning: Command \textendash invalid in math mode on input line 127.
 
 
-Overfull \hbox (3.48244pt too wide) in paragraph at lines 126--127
+Overfull \hbox (3.48244pt too wide) in paragraph at lines 127--128
 \OT1/cmr/m/n/12 A stan-dard X-band ($8\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2{12\OM
 L/cmm/m/it/12 :\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 GHz$\OT1/cmr/m/n/12 ) rect-an-
 gu-lar waveg-uide with in-ner di-men-sions of 0.9 in. ($2\OML/cmm/m/it/12 :\OT1
@@ -890,31 +890,56 @@ gu-lar waveg-uide with in-ner di-men-sions of 0.9 in. ($2\OML/cmm/m/it/12 :\OT1
  []
 
 [3] [4]
+<./images/im_gamma_plot_8-2.png, id=71, 933.4875pt x 370.38374pt>
+File: ./images/im_gamma_plot_8-2.png Graphic file (type png)
+<use ./images/im_gamma_plot_8-2.png>
+Package pdftex.def Info: ./images/im_gamma_plot_8-2.png  used on input line 181
+.
+(pdftex.def)             Requested size: 455.24408pt x 180.63057pt.
+<./images/re_gamma_plot_8-2.png, id=72, 939.51pt x 372.64218pt>
+File: ./images/re_gamma_plot_8-2.png Graphic file (type png)
+<use ./images/re_gamma_plot_8-2.png>
+Package pdftex.def Info: ./images/re_gamma_plot_8-2.png  used on input line 189
+.
+(pdftex.def)             Requested size: 455.24408pt x 180.56635pt.
+ [5 <./images/im_gamma_plot_8-2.png (PNG copy)> <./images/re_gamma_plot_8-2.png
+ (PNG copy)>]
+<./images/design.png, id=80, 722.7pt x 384.6872pt>
+File: ./images/design.png Graphic file (type png)
+<use ./images/design.png>
+Package pdftex.def Info: ./images/design.png  used on input line 200.
+(pdftex.def)             Requested size: 455.24408pt x 242.32486pt.
+ [6 <./images/design.png (PNG copy)>]
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 176.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 208.
 
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 176.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 208.
 
 Missing character: There is no Ö in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-[5]
-./main.tex:204: Missing $ inserted.
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+[7]
+./main.tex:237: Missing $ inserted.
 <inserted text> 
                 $
-l.204   \item[\cdot]
+l.237   \item[\cdot]
                      $\phi = 30\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:204: Extra }, or forgotten $.
+./main.tex:237: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.204   \item[\cdot]
+l.237   \item[\cdot]
                      $\phi = 30\degree$
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -922,18 +947,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:204: Missing $ inserted.
+./main.tex:237: Missing $ inserted.
 <inserted text> 
                 $
-l.204   \item[\cdot]
+l.237   \item[\cdot]
                      $\phi = 30\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:204: Missing } inserted.
+./main.tex:237: Missing } inserted.
 <inserted text> 
                 }
-l.204   \item[\cdot]
+l.237   \item[\cdot]
                      $\phi = 30\degree$
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -941,18 +966,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:205: Missing $ inserted.
+./main.tex:238: Missing $ inserted.
 <inserted text> 
                 $
-l.205   \item[\cdot]
+l.238   \item[\cdot]
                      $\phi = 90\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:205: Extra }, or forgotten $.
+./main.tex:238: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.205   \item[\cdot]
+l.238   \item[\cdot]
                      $\phi = 90\degree$
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -960,18 +985,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:205: Missing $ inserted.
+./main.tex:238: Missing $ inserted.
 <inserted text> 
                 $
-l.205   \item[\cdot]
+l.238   \item[\cdot]
                      $\phi = 90\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:205: Missing } inserted.
+./main.tex:238: Missing } inserted.
 <inserted text> 
                 }
-l.205   \item[\cdot]
+l.238   \item[\cdot]
                      $\phi = 90\degree$
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -979,25 +1004,24 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<./images/fig11-2.png, id=76, 417.81094pt x 289.83281pt>
+<./images/fig11-2.png, id=94, 417.81094pt x 289.83281pt>
 File: ./images/fig11-2.png Graphic file (type png)
 <use ./images/fig11-2.png>
-Package pdftex.def Info: ./images/fig11-2.png  used on input line 211.
+Package pdftex.def Info: ./images/fig11-2.png  used on input line 244.
 (pdftex.def)             Requested size: 284.52756pt x 197.38441pt.
-[6 <./images/fig11-2.png (PNG copy)>]
-<./images/errors.png, id=82, 969.6225pt x 158.84344pt>
+[8 <./images/fig11-2.png (PNG copy)>] [9]
+<./images/errors.png, id=104, 969.6225pt x 158.84344pt>
 File: ./images/errors.png Graphic file (type png)
 <use ./images/errors.png>
-Package pdftex.def Info: ./images/errors.png  used on input line 225.
+Package pdftex.def Info: ./images/errors.png  used on input line 260.
 (pdftex.def)             Requested size: 540.60236pt x 88.56633pt.
-<./images/rcs_plots_5_10_7-5.png, id=84, 1502.61375pt x 426.09187pt>
-File: ./images/rcs_plots_5_10_7-5.png Graphic file (type png)
-<use ./images/rcs_plots_5_10_7-5.png>
-Package pdftex.def Info: ./images/rcs_plots_5_10_7-5.png  used on input line 23
-5.
-(pdftex.def)             Requested size: 540.60236pt x 153.29543pt.
- [7 <./images/errors.png (PNG copy)> <./images/rcs_plots_5_10_7-5.png (PNG copy
-)>] (./main.bbl) [8] (./main.aux)
+<./images/rcs_plots_multi.png, id=106, 1094.58937pt x 441.90094pt>
+File: ./images/rcs_plots_multi.png Graphic file (type png)
+<use ./images/rcs_plots_multi.png>
+Package pdftex.def Info: ./images/rcs_plots_multi.png  used on input line 270.
+(pdftex.def)             Requested size: 540.60236pt x 218.25278pt.
+ [10 <./images/errors.png (PNG copy)> <./images/rcs_plots_multi.png (PNG copy)>
+] (./main.bbl) [11] (./main.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1005,31 +1029,32 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 639D441599DF9F89F31CF114C9BD33E0;304.
  ) 
 Here is how much of TeX's memory you used:
- 24757 strings out of 480129
- 475880 string characters out of 5893410
- 736725 words of memory out of 5000000
- 42243 multiletter control sequences out of 15000+600000
+ 24787 strings out of 478287
+ 476596 string characters out of 5849288
+ 742509 words of memory out of 5000000
+ 42500 multiletter control sequences out of 15000+600000
  487889 words of font info for 100 fonts, out of 8000000 for 9000
- 81 hyphenation exceptions out of 8191
- 79i,13n,80p,523b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/speedy/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
-0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxbw8a.pfb>
-Output written on main.pdf (8 pages, 547035 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 79i,13n,80p,523b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/wasy-type1/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/boondox/zxxbw8a.pfb>
+Output written on main.pdf (11 pages, 1061953 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 60 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 
