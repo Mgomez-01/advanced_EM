@@ -11,6 +11,8 @@
 \usepackage{gensymb}
 \usepackage{cancel}
 \usepackage{tikz}
+\usepackage[margin=0.75in]{geometry}
+
 \usetikzlibrary{3d,calc}
 \usetikzlibrary{arrows}
 
@@ -214,7 +216,29 @@ A magnetic line source of infinite length and constant magnetic current Im is pl
 
 \newpage
 \section{- 11.20}
-For a strip of width $w = 2\lambda$, plot the $\frac{RCS}{\lambda_o^2}$ (in dB) when the length of the strip is $l = 5\lambda$, $10\lambda$ and $20\lambda$ (plot all three graphs on the same figure). Use the approximate relation between the 2D SW and the 3D RCS. Assume normal incidence.
+For a strip of width $w = 2\lambda$, plot the $\frac{RCS}{\lambda_o^2}$ (in dB) when the length of the strip is $l = 5\lambda$, $10\lambda$ and $20\lambda$ (plot all three graphs on the same figure). Use the approximate relation between the 2D SW and the 3D RCS. Assume normal incidence.\\
+Attempting to solve these was a bit of a challenge in Ansys. I was having issues with getting the answers due to an error that kept crashing the machines. It was the following:
+\begin{center}
+\begin{figure}[h]
+  \hspace{-2cm}
+  \centering
+    \includegraphics[width=19cm]{./images/errors.png}
+    \caption{error seen}
+    \label{fig:error_11-20}
+  \end{figure}
+\end{center}
+Because of this, the plot for the $20\lambda$ plot did not work out. It kept failing no matter the changes I made to the bounding box. In order for the plots to be generated for these, I had to change the number of points quite a bit. I usually prefer to leave these with a min resolution of 1$\circ$ but it was not possible in this case. instead, here is a plot that includes $7.5\lambda$ in \ref{fig:endResults}.
+\begin{center}
+\begin{figure}[h]
+  \hspace{-2cm}
+  \centering
+    \includegraphics[width=19cm]{./images/rcs_plots_5_10_7-5.png}
+    \caption{plots for $5\lambda$, $7.5\lambda$ and $10\lambda$}
+    \label{fig:endResults}
+  \end{figure}
+\end{center}
+
+
 
 \newpage
 

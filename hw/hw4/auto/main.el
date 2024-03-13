@@ -4,13 +4,13 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "12pt")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("datetime2" "calc")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+                     '(("datetime2" "calc") ("geometry" "margin=0.75in")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
@@ -30,7 +30,8 @@
     "amsbsy"
     "gensymb"
     "cancel"
-    "tikz")
+    "tikz"
+    "geometry")
    (TeX-add-symbols
     '("Cross" 2)
     '("delCross" 1)
@@ -40,7 +41,9 @@
     "TimeUntilDue"
     "originalBibTeX")
    (LaTeX-add-labels
-    "fig:11-2")
+    "fig:11-2"
+    "fig:error_11-20"
+    "fig:endResults")
    (LaTeX-add-bibliographies
     "references/references"))
  :latex)
