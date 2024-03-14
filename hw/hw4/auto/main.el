@@ -44,6 +44,8 @@
     "fig:8-2"
     "fig:8-2-2"
     "fig:ansys_model_8-2"
+    "fig:9-14"
+    "fig:9-14des"
     "fig:11-2"
     "fig:error_11-20"
     "fig:endResults")

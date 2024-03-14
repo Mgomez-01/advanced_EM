@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.22)  13 MAR 2024 10:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.22)  14 MAR 2024 10:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -910,36 +910,46 @@ File: ./images/design.png Graphic file (type png)
 Package pdftex.def Info: ./images/design.png  used on input line 200.
 (pdftex.def)             Requested size: 455.24408pt x 242.32486pt.
  [6 <./images/design.png (PNG copy)>]
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 208.
-
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 208.
-
-Missing character: There is no Ö in font cmr12!
-
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 [7]
-./main.tex:237: Missing $ inserted.
+<./images/im_gamma_plot_9-14.png, id=94, 925.20656pt x 466.74374pt>
+File: ./images/im_gamma_plot_9-14.png Graphic file (type png)
+<use ./images/im_gamma_plot_9-14.png>
+Package pdftex.def Info: ./images/im_gamma_plot_9-14.png  used on input line 24
+8.
+(pdftex.def)             Requested size: 512.1496pt x 258.36926pt.
+
+Overfull \hbox (6.2596pt too wide) in paragraph at lines 248--249
+ [][] 
+ []
+
+<./images/design_9-14.png, id=95, 623.32875pt x 470.50781pt>
+File: ./images/design_9-14.png Graphic file (type png)
+<use ./images/design_9-14.png>
+Package pdftex.def Info: ./images/design_9-14.png  used on input line 259.
+(pdftex.def)             Requested size: 256.0748pt x 193.29713pt.
+[8 <./images/im_gamma_plot_9-14.png (PNG copy)> <./images/design_9-14.png (PNG 
+copy)>]
+./main.tex:275: Missing $ inserted.
 <inserted text> 
                 $
-l.237   \item[\cdot]
+l.275   \item[\cdot]
                      $\phi = 30\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:237: Extra }, or forgotten $.
+./main.tex:275: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.237   \item[\cdot]
+l.275   \item[\cdot]
                      $\phi = 30\degree$
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -947,18 +957,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:237: Missing $ inserted.
+./main.tex:275: Missing $ inserted.
 <inserted text> 
                 $
-l.237   \item[\cdot]
+l.275   \item[\cdot]
                      $\phi = 30\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:237: Missing } inserted.
+./main.tex:275: Missing } inserted.
 <inserted text> 
                 }
-l.237   \item[\cdot]
+l.275   \item[\cdot]
                      $\phi = 30\degree$
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -966,18 +976,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:238: Missing $ inserted.
+./main.tex:276: Missing $ inserted.
 <inserted text> 
                 $
-l.238   \item[\cdot]
+l.276   \item[\cdot]
                      $\phi = 90\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:238: Extra }, or forgotten $.
+./main.tex:276: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.238   \item[\cdot]
+l.276   \item[\cdot]
                      $\phi = 90\degree$
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -985,18 +995,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:238: Missing $ inserted.
+./main.tex:276: Missing $ inserted.
 <inserted text> 
                 $
-l.238   \item[\cdot]
+l.276   \item[\cdot]
                      $\phi = 90\degree$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:238: Missing } inserted.
+./main.tex:276: Missing } inserted.
 <inserted text> 
                 }
-l.238   \item[\cdot]
+l.276   \item[\cdot]
                      $\phi = 90\degree$
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1004,35 +1014,32 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<./images/fig11-2.png, id=94, 417.81094pt x 289.83281pt>
+<./images/fig11-2.png, id=102, 417.81094pt x 289.83281pt>
 File: ./images/fig11-2.png Graphic file (type png)
 <use ./images/fig11-2.png>
-Package pdftex.def Info: ./images/fig11-2.png  used on input line 244.
+Package pdftex.def Info: ./images/fig11-2.png  used on input line 282.
 (pdftex.def)             Requested size: 284.52756pt x 197.38441pt.
-[8 <./images/fig11-2.png (PNG copy)>] [9]
-<./images/errors.png, id=104, 969.6225pt x 158.84344pt>
+[9 <./images/fig11-2.png (PNG copy)>] [10]
+<./images/errors.png, id=112, 969.6225pt x 158.84344pt>
 File: ./images/errors.png Graphic file (type png)
 <use ./images/errors.png>
-Package pdftex.def Info: ./images/errors.png  used on input line 260.
+Package pdftex.def Info: ./images/errors.png  used on input line 298.
 (pdftex.def)             Requested size: 540.60236pt x 88.56633pt.
-<./images/rcs_plots_multi.png, id=106, 1094.58937pt x 441.90094pt>
+<./images/rcs_plots_multi.png, id=114, 1094.58937pt x 441.90094pt>
 File: ./images/rcs_plots_multi.png Graphic file (type png)
 <use ./images/rcs_plots_multi.png>
-Package pdftex.def Info: ./images/rcs_plots_multi.png  used on input line 270.
+Package pdftex.def Info: ./images/rcs_plots_multi.png  used on input line 308.
 (pdftex.def)             Requested size: 540.60236pt x 218.25278pt.
- [10 <./images/errors.png (PNG copy)> <./images/rcs_plots_multi.png (PNG copy)>
-] (./main.bbl) [11] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+ [11 <./images/errors.png (PNG copy)> <./images/rcs_plots_multi.png (PNG copy)>
+] (./main.bbl) [12] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 639D441599DF9F89F31CF114C9BD33E0;304.
  ) 
 Here is how much of TeX's memory you used:
- 24787 strings out of 478287
- 476596 string characters out of 5849288
- 742509 words of memory out of 5000000
- 42500 multiletter control sequences out of 15000+600000
+ 24805 strings out of 478287
+ 477058 string characters out of 5849288
+ 743590 words of memory out of 5000000
+ 42513 multiletter control sequences out of 15000+600000
  487889 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,13n,80p,523b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1051,10 +1058,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/wasy-type1/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/boondox/zxxbw8a.pfb>
-Output written on main.pdf (11 pages, 1061953 bytes).
+Output written on main.pdf (12 pages, 1598952 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

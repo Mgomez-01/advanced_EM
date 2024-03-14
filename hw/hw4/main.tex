@@ -132,7 +132,7 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
     (f_{c})_{mn} &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2}\\
     (f_{c})_{10}  &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{1\pi}{a}\right)^2 + \left(\frac{0\pi}{b}\right)^2}\\
                  &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{\pi}{a}\right)^2}\\
-    &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{\pi}{2.86*10^{-2}}\right)^2} = 4.09832 GHz
+    &= \frac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\left(\frac{\pi}{2.86\cdot 10^{-2}}\right)^2} = 4.09832 GHz
   \end{align*}
 \item[(b)] Guide wavelength ($\lambda_g$) in $cm$\\
   This one can be done with a combination of expressions from chapter 8 in \cite{balanis_2012}, (8-21a,b,c). we can do this with $a$ because the frequency in question is $10GHz$ which us above the cutoff found in part $a$.
@@ -169,8 +169,8 @@ A standard X-band ($8.2–12.4 GHz$) rectangular waveguide with inner dimensions
 \noindent
 Since $v$ is the expression $\frac{c}{\sqrt{\epsilon_r}}$, we can input those into the expression and solve for the speeds.
 \begin{align*}
-  v_p &= \frac{c}{\sqrt{\epsilon_r}\sqrt{1-\left(\frac{f_c}{f}\right)^2}} = 2.05419*10^8 \left[\frac{m}{s}\right] \\
-  v_g &= \frac{c}{\sqrt{\epsilon_r}}\sqrt{1-\left(\frac{f_c}{f}\right)^2} = 1.70916*10^8 \left[\frac{m}{s}\right]
+  v_p &= \frac{c}{\sqrt{\epsilon_r}\sqrt{1-\left(\frac{f_c}{f}\right)^2}} = 2.05419\cdot 10^8 \left[\frac{m}{s}\right] \\
+  v_g &= \frac{c}{\sqrt{\epsilon_r}}\sqrt{1-\left(\frac{f_c}{f}\right)^2} = 1.70916\cdot 10^8 \left[\frac{m}{s}\right]
 \end{align*}
 \newpage
 \noindent
@@ -205,7 +205,7 @@ Here is a view of the simulation design in \ref{fig:ansys_model_8-2}. File for r
 \newpage
 
 \section{- 9.14}
-A circular waveguide with radius of $3 cm$ is made of copper ($\sigma = 5.76 × 107 \frac{S}{m}$). For the dominant $TE_{11}$ and low-loss $TE_{01}$ modes, determine their corresponding cut-off frequencies and attenuation constants (in $\frac{Np}{m}$ and $\frac{dB}{m}$ at a frequency of $7 GHz$. Assume that the waveguide is filled with air.\\
+A circular waveguide with radius of $3 cm$ is made of copper ($\sigma = 5.76\cdot 10^7 \frac{S}{m}$). For the dominant $TE_{11}$ and low-loss $TE_{01}$ modes, determine their corresponding cut-off frequencies and attenuation constants (in $\frac{Np}{m}$ and $\frac{dB}{m}$ at a frequency of $7 GHz$. Assume that the waveguide is filled with air.\\
 
 \noindent
 This problem can be modeled using CST, or Ansys, and we can also solve for the values directly. Using the expression for the cutoff frequency seen in 9-12a of \cite{balanis_2012}, we can solve for $f_c$, and using expression 9-34a in  \cite{balanis_2012}, we can solve for the attenuation constant for our modes. $\chi_{mn}'$ depends on the mode and can be found with table 9-1 of \cite{balanis_2012}.
@@ -217,16 +217,54 @@ This problem can be modeled using CST, or Ansys, and we can also solve for the v
 \begin{itemize}
 \item[$TE_{11}$] : $\chi_{11}' = 1.8412$
   \begin{itemize}
-    \item [a)] $f_c$
-    \item [b)] $\alpha_c$\\
+  \item [a)] $f_c$\\
+    \begin{align*}
+      f_c &= \frac{\chi_{11}'}{2\pi a \sqrt{\mu\epsilon}} = \frac{1.8412}{2\pi (3\cdot 10^{-2}) \sqrt{\mu_0\epsilon_0}} = 2.928\cdot 10^{9} = 2.93 GHz 
+    \end{align*}
+  \item [b)] $\alpha_c$
+    \begin{align*}
+      \alpha_{11} &= \frac{R_s}{a\eta\sqrt{1-\left(\frac{2.93}{7}\right)^2}}\left[ \left(\frac{2.93}{7}\right)^2 + \frac{1^2}{(1.8412)^2- 1}  \right]\\
+                  &= \frac{\sqrt{\frac{\omega \mu}{2\sigma}}}{3\cdot 10^{-2}120\pi\sqrt{1-\left(\frac{2.93}{7}\right)^2}}... \\
+      &= .00126 \left[\frac{Np}{m}\right] = .01098 \left[\frac{dB}{m}\right]
+    \end{align*}
   \end{itemize}
   \item[$TE_{01}$] : $\chi_{01}' = 3.8318$
   \begin{itemize}
-    \item [a)] $f_c$
-    \item [b)] $\alpha_c$
+  \item [a)] $f_c$
+    \begin{align*}
+            f_c &= \frac{\chi_{mn}'}{2\pi a \sqrt{\mu\epsilon}} = \frac{3.8318}{2\pi (3\cdot 10^{-2}) \sqrt{\mu_0\epsilon_0}} = 6.0944\cdot 10^{9} = 6.09 GHz 
+    \end{align*}
+  \item [b)] $\alpha_c$ using the same equation as above for mode 11
+    \begin{align*}
+      &= .00298 \left[\frac{Np}{m}\right] = .0259 \left[\frac{dB}{m}\right]
+    \end{align*}
   \end{itemize}
 \end{itemize}
 \newpage
+Verifying this one can also be done as we did with the previous one. Verifying the cutoff frequency will ensure that the rest of the calculations that are dependent on it will come out as expected.
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=18cm]{./images/im_gamma_plot_9-14.png}
+    \caption{cutoff verification 9-14}
+    \label{fig:9-14}
+  \end{figure}
+\end{center}
+\vspace{-1cm}
+To be honest, I am uncertain of the reason for needing all the modes that I added to get a plot that showed one at $6GHz$, but it does appear to come out as we expect in the simulation. Here is the design as well.
+\vspace{-1cm}
+\begin{center}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{./images/design_9-14.png}
+    \caption{design 9-14}
+    \label{fig:9-14des}
+  \end{figure}
+\end{center}
+
+
+\newpage
+
 \section{- 11.2}
 A magnetic line source of infinite length and constant magnetic current Im is placed parallel to the z axis at a height h above a PEC ground plane of infinite extent, as shown in Figure 11-2 except that we now have a magnetic line source.
 \begin{itemize}
