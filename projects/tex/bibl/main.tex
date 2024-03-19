@@ -1,0 +1,132 @@
+\documentclass[journal]{IEEEtran}
+
+% Bibliography stuff
+
+% removed the bib package and call below to adhere to the IEEEtran bib styl
+%\useepackage{biblatex} %Imports biblatex package
+%\addbibresource{bib/citations.bib} %Import the bibliography file
+
+\usepackage[autostyle=false, style=english]{csquotes}
+\MakeOuterQuote{"}
+\usepackage{dirtytalk}
+\usepackage{comment}
+\usepackage{ulem}
+\usepackage{lscape}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage{amsmath,amsthm,enumitem,amssymb}
+\usepackage{appendix}
+\usepackage{xcolor}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{caption}
+\usepackage{hyperref}\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage[listings,skins]{tcolorbox}
+\usepackage[skipbelow=\topskip,skipabove=\topskip]{mdframed}
+\mdfsetup{roundcorner=1}
+
+\usetikzlibrary{arrows.meta,calc}
+
+
+
+% Fancy
+%%%%%%%%%
+\definecolor{MyComments}{HTML}{55CC10}
+\definecolor{MyKeywords}{HTML}{1E47FC}
+\definecolor{MyStrings}{HTML}{A2A8C1}
+\definecolor{MyIdentifiers}{HTML}{000000}
+
+\lstset{
+  backgroundcolor=\color{white},
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  captionpos=t,
+  commentstyle=\color{MyComments},
+  keywordstyle=\color{MyKeywords},
+  stringstyle=\color{MyStrings},
+  identifierstyle=\color{MyIdentifiers}
+}
+
+%%%%%%%%%%
+\usepackage{caption}
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+   \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+
+\newcommand{\figref}[1]{[\ref{#1}]}
+
+\begin{document}
+\title{Reference page for the Exploration of Geometric Algebra for Microwave Network Classification, Simplification, and self-study }
+
+\author{
+    \IEEEauthorblockN{Miguel Gomez}\\
+    \IEEEauthorblockA{\textit{University of Utah Computer Engineering}}
+    }
+
+\maketitle
+
+\IEEEpeerreviewmaketitle
+\begin{abstract}
+  \begin{IEEEkeywords}
+Bivector,
+Clifford Algebra,
+Geometric Algebra, 
+Mobius Transformation,
+Multivector, 
+Rotor, 
+Spinor
+\end{IEEEkeywords}
+
+\end{abstract}
+
+
+\section{Introduction}
+I am adding in all my references here for the assignment. 
+  \cite{Montoya_9248978}
+  \cite{Montoya_9808623}
+  \cite{Zhang_9943322}
+  \cite{Li_9913488}
+  \cite{Franchini_6783758}
+  \cite{Eid_9992202}
+  \cite{Corrochano_9488174}
+  \cite{Neve_10345560}
+  \cite{Arsenovic_7982607}
+  \cite{scikit_9632487}
+\section{Reflection}
+\subsection{My Process}
+\noindent
+My journey has had me working on papers and compiling sources for some time now. I do not like using Mendeley as they broke the integration with Google Chromium based browsers and have yet to do anything to fix it. I used it before and it was useful, but I have taken to keeping the PDFs of the papers that I put together, and I always get the bibtex entry from the source itself. I add them all to a custom bibliography that contains everything which is backed up on Github as well as my home PC and Laptop. That way I am never too far away from my sources and have an easy method of sharing them with others.\\
+Additionally, I have been using Emacs as my main text editor for some time since it is very easy to have custom code that runs when I am working in a particular language. One of which is the \LaTeX $\ $ language for markup. It is easy to put together papers with the exact formatting that I want, or in the case of the main place where I am looking to publish, IEEE has the IEEETran document style that is provided for their journals.  
+\subsection{Things I liked this week}
+\noindent
+I had not used the Open Knowledge Map before but I really liked the way things are set up there. Knowing that I could easily take the topic that I am working on and create a map like this by just using a single search term is a powerful tool. It was very rewarding and validating to see many of the same resources that I have come across show up in the list of papers and topic bubbles when looking at Geometric Algebra. I will likely continue to use these in the future. I particularly liked the fact that the bubbles contained papers that likely had a smaller Euclidean distance in the N-dimensional space where this data is compiled.
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,GA_reference.bib}
+%\printbibliography
+% that's all folks
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
