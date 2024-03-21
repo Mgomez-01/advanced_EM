@@ -31,8 +31,8 @@ def generate_sparse_matrix(m, n, density=0.1):
 if __name__ == '__main__':
     # Example usage
     parser = argparse.ArgumentParser(description="Generate a sparse matrix with specified dimensions and density.")
-    parser.add_argument('m', type=int, help="Number of rows (height) of the matrix")
-    parser.add_argument('n', type=int, help="Number of columns (width) of the matrix")
+    parser.add_argument('n', type=int, help="Number of rows (height) of the matrix")
+    parser.add_argument('m', type=int, help="Number of columns (width) of the matrix")
     parser.add_argument('--density', type=float, default=0.5, help="Density of the non-zero elements in the matrix")
     
     # Parse arguments
@@ -51,5 +51,7 @@ if __name__ == '__main__':
         for row in results:
             # Converting each row to a string and writing to the file
             np.savetxt(f, row[np.newaxis], fmt='%g')
-    
+
+    print(results)
     print(f"Matrix saved to {filename}")
+    
