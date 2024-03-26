@@ -5,7 +5,7 @@
 [Author]
 speedy
 [Mesh Cells]
-1,748,439
+1,239,300
 [Mesh Type]
 Hexahedral
 [Last Problem Type]
@@ -17,5 +17,5 @@ t
 [Results]
 Time Domain: S-Parameter
 [Modeler Unique ID]
-5:test_filter.cst?d46ecef8ea7e952e098e5fd4c864e499?33142:numberofparameters=10:port=1>mode=1>zre=0>zim=0?port=2>mode=1>zre=0>zim=0::test_filter.sab>b642d558d4a0cde6ce36fc849d0cf6b0>79037?tdr-pulse.usf>733bda60e6a9fdefa613eb6c528eaea0>10256?signal2.usf>9d754dd841a8b05a3c65c55573b238ee>1674:b_h?b_w?h?len_trace?m?n?t_d?t_p?w?w_trace
+5:test_filter.cst?be744b9bf3754b94c2e1dddfd626e217?25758:numberofparameters=10:port=1>mode=1>zre=0>zim=0?port=2>mode=1>zre=0>zim=0::test_filter.sab>b642d558d4a0cde6ce36fc849d0cf6b0>79037?tdr-pulse.usf>733bda60e6a9fdefa613eb6c528eaea0>10256?signal2.usf>9d754dd841a8b05a3c65c55573b238ee>1674:b_h?b_w?h?len_trace?m?n?t_d?t_p?w?w_trace
 [Comment]

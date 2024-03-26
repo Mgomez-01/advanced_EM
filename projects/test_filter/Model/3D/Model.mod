@@ -126,249 +126,6 @@ ChangeSolverType("HF Time Domain")
 
 '----------------------------------------------------------------------------
 
-'@ import external project: /home/speedy/cst/test_filter.cst
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-With Material 
-     .Reset 
-     .Name "Copper (pure)" 
-     .Folder "test_filter" 
-     .Rho "8930.0"
-     .ThermalType "Normal"
-     .ThermalConductivity "401.0"
-     .SpecificHeat "390", "J/K/kg"
-     .DynamicViscosity "0"
-     .UseEmissivity "True"
-     .Emissivity "0"
-     .MetabolicRate "0"
-     .VoxelConvection "0"
-     .BloodFlow "0"
-     .MechanicsType "Isotropic"
-     .YoungsModulus "120"
-     .PoissonsRatio "0.33"
-     .ThermalExpansionRate "17"
-     .IntrinsicCarrierDensity "0"
-     .FrqType "static"
-     .Type "Normal"
-     .MaterialUnit "Frequency", "Hz"
-     .MaterialUnit "Geometry", "mm"
-     .MaterialUnit "Time", "s"
-     .Epsilon "1"
-     .Mu "1.0"
-     .Sigma "5.96e+007"
-     .TanD "0.0"
-     .TanDFreq "0.0"
-     .TanDGiven "False"
-     .TanDModel "ConstTanD"
-     .SetConstTanDStrategyEps "AutomaticOrder"
-     .ConstTanDModelOrderEps "3"
-     .DjordjevicSarkarUpperFreqEps "0"
-     .SetElParametricConductivity "False"
-     .ReferenceCoordSystem "Global"
-     .CoordSystemType "Cartesian"
-     .SigmaM "0"
-     .TanDM "0.0"
-     .TanDMFreq "0.0"
-     .TanDMGiven "False"
-     .TanDMModel "ConstTanD"
-     .SetConstTanDStrategyMu "AutomaticOrder"
-     .ConstTanDModelOrderMu "3"
-     .DjordjevicSarkarUpperFreqMu "0"
-     .SetMagParametricConductivity "False"
-     .DispModelEps  "None"
-     .DispModelMu "None"
-     .DispersiveFittingSchemeEps "Nth Order"
-     .MaximalOrderNthModelFitEps "10"
-     .ErrorLimitNthModelFitEps "0.1"
-     .UseOnlyDataInSimFreqRangeNthModelEps "False"
-     .DispersiveFittingSchemeMu "Nth Order"
-     .MaximalOrderNthModelFitMu "10"
-     .ErrorLimitNthModelFitMu "0.1"
-     .UseOnlyDataInSimFreqRangeNthModelMu "False"
-     .UseGeneralDispersionEps "False"
-     .UseGeneralDispersionMu "False"
-     .NLAnisotropy "False"
-     .NLAStackingFactor "1"
-     .NLADirectionX "1"
-     .NLADirectionY "0"
-     .NLADirectionZ "0"
-     .FrqType "all"
-     .Type "Lossy metal"
-     .MaterialUnit "Frequency", "GHz"
-     .MaterialUnit "Geometry", "mm"
-     .MaterialUnit "Time", "s"
-     .MaterialUnit "Temperature", "Kelvin"
-     .Mu "1.0"
-     .Sigma "5.96e+007"
-     .LossyMetalSIRoughness "0.0"
-     .ReferenceCoordSystem "Global"
-     .CoordSystemType "Cartesian"
-     .NLAnisotropy "False"
-     .NLAStackingFactor "1"
-     .NLADirectionX "1"
-     .NLADirectionY "0"
-     .NLADirectionZ "0"
-     .Colour "1", "1", "0" 
-     .Wireframe "False" 
-     .Reflection "False" 
-     .Allowoutline "True" 
-     .Transparentoutline "False" 
-     .Transparency "0" 
-     .Create
-End With 
-
-With Material 
-     .Reset 
-     .Name "Rogers RO4350B (lossy)" 
-     .Folder "test_filter" 
-     .Rho "0.0"
-     .ThermalType "Normal"
-     .ThermalConductivity "0.69"
-     .SpecificHeat "0", "J/K/kg"
-     .DynamicViscosity "0"
-     .UseEmissivity "True"
-     .Emissivity "0"
-     .MetabolicRate "0.0"
-     .VoxelConvection "0.0"
-     .BloodFlow "0"
-     .MechanicsType "Unused"
-     .IntrinsicCarrierDensity "0"
-     .FrqType "all"
-     .Type "Normal"
-     .MaterialUnit "Frequency", "GHz"
-     .MaterialUnit "Geometry", "mm"
-     .MaterialUnit "Time", "s"
-     .Epsilon "3.66"
-     .Mu "1.0"
-     .Sigma "0.0"
-     .TanD "0.0037"
-     .TanDFreq "10.0"
-     .TanDGiven "True"
-     .TanDModel "ConstTanD"
-     .SetConstTanDStrategyEps "AutomaticOrder"
-     .ConstTanDModelOrderEps "3"
-     .DjordjevicSarkarUpperFreqEps "0"
-     .SetElParametricConductivity "False"
-     .ReferenceCoordSystem "Global"
-     .CoordSystemType "Cartesian"
-     .SigmaM "0.0"
-     .TanDM "0.0"
-     .TanDMFreq "0.0"
-     .TanDMGiven "False"
-     .TanDMModel "ConstSigma"
-     .SetConstTanDStrategyMu "AutomaticOrder"
-     .ConstTanDModelOrderMu "3"
-     .DjordjevicSarkarUpperFreqMu "0"
-     .SetMagParametricConductivity "False"
-     .DispModelEps "None"
-     .DispModelMu "None"
-     .DispersiveFittingSchemeEps "1st Order"
-     .DispersiveFittingSchemeMu "1st Order"
-     .UseGeneralDispersionEps "False"
-     .UseGeneralDispersionMu "False"
-     .NLAnisotropy "False"
-     .NLAStackingFactor "1"
-     .NLADirectionX "1"
-     .NLADirectionY "0"
-     .NLADirectionZ "0"
-     .Colour "0.94", "0.82", "0.76" 
-     .Wireframe "False" 
-     .Reflection "False" 
-     .Allowoutline "True" 
-     .Transparentoutline "False" 
-     .Transparency "0" 
-     .Create
-End With 
-
-With SAT
-     .Reset 
-     .FileName "*test_filter.sab" 
-     .SubProjectName3D "/home/speedy/cst/test_filter.cst" 
-     .SubProjectScaleFactor "0.001" 
-     .Version "14.0" 
-     .PortnameMap "" 
-     .ImportToActiveCoordinateSystem "True" 
-     .Curves "True" 
-     .Wires "True" 
-     .SolidWiresAsSolids "False" 
-     .ImportSources "False" 
-     .Set "ImportSensitivityInformation", "False" 
-     .Read 
-End With
-With Port 
-     .Reset 
-     .PortNumber "1" 
-     .Label "Input"
-     .Folder "test_filter"
-     .NumberOfModes "1"
-     .AdjustPolarization "False"
-     .PolarizationAngle "0"
-     .ReferencePlaneDistance "0"
-     .TextSize "50"
-     .TextMaxLimit "1"
-     .Coordinates "Free"
-     .Orientation "zmin"
-     .PortOnBound "False"
-     .ClipPickedPortToBound "False"
-     .Xrange "0", "2.7999999999999972"
-     .Yrange "0", "0.03499999999999992"
-     .Zrange "0", "0"
-     .XrangeAdd "0.0", "0.0"
-     .YrangeAdd "0.0", "0.0"
-     .ZrangeAdd "0.0", "0.0"
-     .SingleEnded "False"
-     .WaveguideMonitor "False"
-     .ReferenceWCS "1.4", "0.0175", "0", "0", "0", "-1", "0", "1", "0"
-     .CreateImported 
-End With 
-
-With Transform 
-     .Reset 
-     .Name "port1" 
-     .Transform "port", "GlobalToLocal" 
-     .Vector "0", "18.6", "1.52" 
-     .AdjustVectorToSubProjectScaleFactor 
-     .Matrix "0", "1", "0", "0", "0", "1", "1", "0", "0" 
-     .Transform "port", "matrix" 
-End With 
-
-With Port 
-     .Reset 
-     .PortNumber "2" 
-     .Label "Output"
-     .Folder "test_filter"
-     .NumberOfModes "1"
-     .AdjustPolarization "False"
-     .PolarizationAngle "0"
-     .ReferencePlaneDistance "0"
-     .TextSize "50"
-     .TextMaxLimit "1"
-     .Coordinates "Free"
-     .Orientation "zmax"
-     .PortOnBound "False"
-     .ClipPickedPortToBound "False"
-     .Xrange "0", "2.7999999999999972"
-     .Yrange "0", "0.03499999999999992"
-     .Zrange "0", "0"
-     .XrangeAdd "0.0", "0.0"
-     .YrangeAdd "0.0", "0.0"
-     .ZrangeAdd "0.0", "0.0"
-     .SingleEnded "False"
-     .WaveguideMonitor "False"
-     .ReferenceWCS "1.4", "0.0175", "0", "0", "0", "1", "0", "1", "0"
-     .CreateImported 
-End With 
-
-With Transform 
-     .Reset 
-     .Name "port2" 
-     .Transform "port", "GlobalToLocal" 
-     .Vector "80", "18.6", "1.52" 
-     .AdjustVectorToSubProjectScaleFactor 
-     .Matrix "0", "1", "0", "0", "0", "1", "1", "0", "0" 
-     .Transform "port", "matrix" 
-End With
-
 '@ set 3d mesh adaptation properties
 
 '[VERSION]2023.0|32.0.1|20220912[/VERSION]
@@ -467,109 +224,6 @@ UseDistributedComputingMemorySetting "False"
 MinDistributedComputingMemoryLimit "0"
 UseDistributedComputingSharedDirectory "False"
 OnlyConsider0D1DResultsForDC "False"
-
-'@ delete port: test_filter:port1
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-Port.Delete "1"
-
-'@ delete port: test_filter:port2
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-Port.Delete "2"
-
-'@ define port: 5
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-With Port 
-     .Reset 
-     .PortNumber "5" 
-     .Label ""
-     .Folder "test_filter"
-     .NumberOfModes "1"
-     .AdjustPolarization "False"
-     .PolarizationAngle "0.0"
-     .ReferencePlaneDistance "0"
-     .TextSize "50"
-     .TextMaxLimit "1"
-     .Coordinates "Full"
-     .Orientation "xmin"
-     .PortOnBound "False"
-     .ClipPickedPortToBound "False"
-     .Xrange "0", "0"
-     .Yrange "-24.982704833333", "64.982704833333"
-     .Zrange "-25.017704833333", "26.537704833333"
-     .XrangeAdd "0.0", "0.0"
-     .YrangeAdd "0.0", "0.0"
-     .ZrangeAdd "0.0", "0.0"
-     .SingleEnded "False"
-     .WaveguideMonitor "False"
-     .Create 
-End With
-
-'@ define port: 6
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-With Port 
-     .Reset 
-     .PortNumber "6" 
-     .Label ""
-     .Folder "test_filter"
-     .NumberOfModes "1"
-     .AdjustPolarization "False"
-     .PolarizationAngle "0.0"
-     .ReferencePlaneDistance "0"
-     .TextSize "50"
-     .TextMaxLimit "1"
-     .Coordinates "Full"
-     .Orientation "xmin"
-     .PortOnBound "False"
-     .ClipPickedPortToBound "False"
-     .Xrange "0", "0"
-     .Yrange "-24.982704833333", "64.982704833333"
-     .Zrange "-25.017704833333", "26.537704833333"
-     .XrangeAdd "0.0", "0.0"
-     .YrangeAdd "0.0", "0.0"
-     .ZrangeAdd "0.0", "0.0"
-     .SingleEnded "False"
-     .WaveguideMonitor "False"
-     .Create 
-End With
-
-'@ modify port: 6
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-With Port 
-     .Reset 
-     .LoadContentForModify "6" 
-     .Label ""
-     .Folder "test_filter"
-     .NumberOfModes "1"
-     .AdjustPolarization "False"
-     .PolarizationAngle "0.0"
-     .ReferencePlaneDistance "0"
-     .TextSize "50"
-     .TextMaxLimit "1"
-     .Coordinates "Full"
-     .Orientation "xmax"
-     .PortOnBound "False"
-     .ClipPickedPortToBound "False"
-     .Xrange "80", "80"
-     .Yrange "-24.982704833333", "64.982704833333"
-     .Zrange "-25.017704833333", "26.537704833333"
-     .XrangeAdd "0.0", "0.0"
-     .YrangeAdd "0.0", "0.0"
-     .ZrangeAdd "0.0", "0.0"
-     .SingleEnded "False"
-     .Shield "none"
-     .WaveguideMonitor "False"
-     .Modify 
-End With
-
-'@ delete component: test_filter
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-Component.Delete "test_filter"
 
 '@ paste structure data: 1
 
@@ -830,46 +484,6 @@ End With
 
 '[VERSION]2023.0|32.0.1|20220912[/VERSION]
 Solid.Rename "top_layer:solid1", "output_trace"
-
-'@ modify port: 5
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-With Port 
-     .Reset 
-     .LoadContentForModify "5" 
-     .Label ""
-     .Folder "test_filter"
-     .NumberOfModes "1"
-     .AdjustPolarization "False"
-     .PolarizationAngle "0.0"
-     .ReferencePlaneDistance "0"
-     .TextSize "50"
-     .TextMaxLimit "1"
-     .Coordinates "Full"
-     .Orientation "xmin"
-     .PortOnBound "False"
-     .ClipPickedPortToBound "False"
-     .Xrange "0", "0"
-     .Yrange "-24.982704833333", "64.982704833333"
-     .Zrange "-25.017704833333", "26.537704833333"
-     .XrangeAdd "0.0", "0.0"
-     .YrangeAdd "0.0", "0.0"
-     .ZrangeAdd "0.0", "0.0"
-     .SingleEnded "False"
-     .Shield "none"
-     .WaveguideMonitor "False"
-     .Modify 
-End With
-
-'@ delete port: test_filter:port6
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-Port.Delete "6"
-
-'@ delete port: test_filter:port5
-
-'[VERSION]2023.0|32.0.1|20220912[/VERSION]
-Port.Delete "5"
 
 '@ define port: 1
 
@@ -1344,7 +958,7 @@ MinDistributedComputingMemoryLimit "0"
 UseDistributedComputingSharedDirectory "False"
 OnlyConsider0D1DResultsForDC "False"
 
-'@ execute macro: make_all_cells
+'@ execute macro: makeAllCells
 
 '[VERSION]2023.0|32.0.1|20220912[/VERSION]
 ' Loop through each position in the grid defined by m and n
@@ -1426,11 +1040,11 @@ With MeshSettings
      .SetMeshType "Hex" 
      .Set "Version", 1%
      'MAX CELL - WAVELENGTH REFINEMENT 
-     .Set "StepsPerWaveNear", "15" 
-     .Set "StepsPerWaveFar", "15" 
+     .Set "StepsPerWaveNear", "20" 
+     .Set "StepsPerWaveFar", "20" 
      .Set "WavelengthRefinementSameAsNear", "1" 
      'MAX CELL - GEOMETRY REFINEMENT 
-     .Set "StepsPerBoxNear", "30" 
+     .Set "StepsPerBoxNear", "20" 
      .Set "StepsPerBoxFar", "1" 
      .Set "MaxStepNear", "0" 
      .Set "MaxStepFar", "0" 
@@ -1494,4 +1108,47 @@ With Mesh
      .SetCADProcessingMethod "MultiThread22", "-1" 
      .SetGPUForMatrixCalculationDisabled "False" 
 End With
+
+'@ set 3d mesh adaptation properties
+
+'[VERSION]2023.0|32.0.1|20220912[/VERSION]
+With MeshAdaption3D
+    .SetType "Time" 
+    .SetAdaptionStrategy "Energy" 
+    .MinPasses "2" 
+    .MaxPasses "6" 
+    .SkipPulses "0" 
+    .CellIncreaseFactor "0.7" 
+    .WeightE "1.0" 
+    .WeightB "1.0" 
+    .RefineX "True" 
+    .RefineY "True" 
+    .RefineZ "True" 
+    .ClearStopCriteria
+    .AddSParameterStopCriterion "False", "2", "3", "0.02", "1", "True" 
+    .Add0DResultStopCriterion "", "0.02", "1", "False" 
+End With
+
+'@ define time domain solver acceleration
+
+'[VERSION]2023.0|32.0.1|20220912[/VERSION]
+With Solver 
+     .UseParallelization "True"
+     .MaximumNumberOfThreads "1024"
+     .MaximumNumberOfCPUDevices "8"
+     .RemoteCalculation "False"
+     .UseDistributedComputing "False"
+     .MaxNumberOfDistributedComputingPorts "64"
+     .DistributeMatrixCalculation "True"
+     .MPIParallelization "False"
+     .AutomaticMPI "False"
+     .HardwareAcceleration "True"
+     .MaximumNumberOfGPUs "1"
+End With
+UseDistributedComputingForParameters "False"
+MaxNumberOfDistributedComputingParameters "2"
+UseDistributedComputingMemorySetting "False"
+MinDistributedComputingMemoryLimit "0"
+UseDistributedComputingSharedDirectory "False"
+OnlyConsider0D1DResultsForDC "False"
 
