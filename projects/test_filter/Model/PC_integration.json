@@ -50,11 +50,6 @@
          "len": 1,
          "name": "3D\\Run VBA Code",
          "type": "float"
-      },
-      {
-         "len": 1,
-         "name": "3D\\Run VBA Code_1",
-         "type": "float"
       }
    ]
 }
